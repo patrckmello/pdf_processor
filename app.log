@@ -1,0 +1,84 @@
+[2025-05-23 17:37:03,289] WARNING in _internal:  * Debugger is active!
+[2025-05-23 17:37:03,295] INFO in _internal:  * Debugger PIN: 382-593-069
+[2025-05-23 17:39:19,687] INFO in _internal:  * Detected change in 'C:\\Scan\\code\\ZG\\unir_dividir_pdf\\app.py', reloading
+[2025-05-23 17:39:20,738] WARNING in _internal:  * Debugger is active!
+[2025-05-23 17:39:20,744] INFO in _internal:  * Debugger PIN: 382-593-069
+[2025-05-23 17:39:32,033] INFO in _internal: 10.1.39.126 - - [23/May/2025 17:39:32] "GET / HTTP/1.1" 200 -
+[2025-05-23 17:39:32,414] INFO in _internal: 10.1.39.126 - - [23/May/2025 17:39:32] "[36mGET /static/assets/zg.jpg HTTP/1.1[0m" 304 -
+[2025-05-23 17:39:32,436] INFO in _internal: 10.1.39.126 - - [23/May/2025 17:39:32] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+[2025-05-23 17:39:32,447] INFO in _internal: 10.1.39.126 - - [23/May/2025 17:39:32] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+[2025-05-23 17:39:40,192] INFO in app: Recebido pedido de merge com 2 arquivo(s).
+[2025-05-23 17:39:40,194] INFO in app: Arquivo '20250522134437821.pdf' adicionado com sucesso ao merge.
+[2025-05-23 17:39:40,207] INFO in app: Arquivo 'Certificados Excel.pdf' adicionado com sucesso ao merge.
+[2025-05-23 17:39:40,283] INFO in app: Merge concluído com sucesso.
+[2025-05-23 17:39:40,286] INFO in _internal: 10.1.39.126 - - [23/May/2025 17:39:40] "POST /merge HTTP/1.1" 200 -
+[2025-05-23 17:41:29,567] INFO in app: Recebido pedido de merge com 12 arquivo(s).
+[2025-05-23 17:41:29,580] INFO in app: Arquivo 'Certificados Excel - Copia (4).pdf' adicionado com sucesso ao merge.
+[2025-05-23 17:41:29,582] INFO in app: Arquivo '20250522134437821 - Copia (2).pdf' adicionado com sucesso ao merge.
+[2025-05-23 17:41:29,600] INFO in app: Arquivo 'Certificados Excel - Copia (5).pdf' adicionado com sucesso ao merge.
+[2025-05-23 17:41:29,608] INFO in app: Arquivo '20250522134437821 - Copia (3).pdf' adicionado com sucesso ao merge.
+[2025-05-23 17:41:29,611] INFO in app: Arquivo '20250522134437821 - Copia (4).pdf' adicionado com sucesso ao merge.
+[2025-05-23 17:41:29,612] INFO in app: Arquivo '20250522134437821 - Copia (5).pdf' adicionado com sucesso ao merge.
+[2025-05-23 17:41:29,633] INFO in app: Arquivo 'Certificados Excel - Copia (3).pdf' adicionado com sucesso ao merge.
+[2025-05-23 17:41:29,643] INFO in app: Arquivo '20250522134437821 - Copia.pdf' adicionado com sucesso ao merge.
+[2025-05-23 17:41:29,645] INFO in app: Arquivo '20250522134437821.pdf' adicionado com sucesso ao merge.
+[2025-05-23 17:41:29,662] INFO in app: Arquivo 'Certificados Excel - Copia.pdf' adicionado com sucesso ao merge.
+[2025-05-23 17:41:29,678] INFO in app: Arquivo 'Certificados Excel - Copia (2).pdf' adicionado com sucesso ao merge.
+[2025-05-23 17:41:29,695] INFO in app: Arquivo 'Certificados Excel.pdf' adicionado com sucesso ao merge.
+[2025-05-23 17:41:30,032] INFO in app: Merge concluído com sucesso.
+[2025-05-23 17:41:30,041] INFO in _internal: 10.1.39.126 - - [23/May/2025 17:41:30] "POST /merge HTTP/1.1" 200 -
+[2025-05-23 17:41:48,643] INFO in _internal: 10.1.39.126 - - [23/May/2025 17:41:48] "GET / HTTP/1.1" 200 -
+[2025-05-23 17:41:48,736] INFO in _internal: 10.1.39.126 - - [23/May/2025 17:41:48] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+[2025-05-23 17:41:48,741] INFO in _internal: 10.1.39.126 - - [23/May/2025 17:41:48] "[36mGET /static/assets/zg.jpg HTTP/1.1[0m" 304 -
+[2025-05-23 17:41:48,755] INFO in _internal: 10.1.39.126 - - [23/May/2025 17:41:48] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+[2025-05-23 17:42:14,874] INFO in app: Recebido pedido de split: 1 arquivo(s), 16 partes.
+[2025-05-23 17:42:14,878] INFO in app: Dividindo 'Certificados Excel - Copia (4).pdf' com 16 páginas em 16 partes.
+[2025-05-23 17:42:15,250] INFO in app: Arquivo 'Certificados Excel - Copia (4).pdf' dividido com sucesso.
+[2025-05-23 17:42:15,251] INFO in app: Split concluído com sucesso.
+[2025-05-23 17:42:15,252] INFO in _internal: 10.1.39.126 - - [23/May/2025 17:42:15] "POST /split HTTP/1.1" 200 -
+[2025-05-23 17:51:00,673] INFO in _internal: 10.1.39.126 - - [23/May/2025 17:51:00] "GET / HTTP/1.1" 200 -
+[2025-05-23 17:51:00,739] INFO in _internal: 10.1.39.126 - - [23/May/2025 17:51:00] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+[2025-05-23 17:51:00,751] INFO in _internal: 10.1.39.126 - - [23/May/2025 17:51:00] "[36mGET /static/assets/zg.jpg HTTP/1.1[0m" 304 -
+[2025-05-23 17:51:00,755] INFO in _internal: 10.1.39.126 - - [23/May/2025 17:51:00] "GET /static/script.js HTTP/1.1" 200 -
+[2025-05-23 17:51:16,045] INFO in app: Recebido pedido de split: 1 arquivo(s), 2 partes.
+[2025-05-23 17:51:16,049] INFO in app: Dividindo 'Certificados Excel - Copia (4).pdf' com 16 páginas em 2 partes.
+[2025-05-23 17:51:16,368] INFO in app: Arquivo 'Certificados Excel - Copia (4).pdf' dividido com sucesso.
+[2025-05-23 17:51:16,369] INFO in app: Split concluído com sucesso.
+[2025-05-23 17:51:16,371] INFO in _internal: 10.1.39.126 - - [23/May/2025 17:51:16] "POST /split HTTP/1.1" 200 -
+[2025-05-23 17:51:32,218] INFO in _internal:  * Detected change in 'C:\\Scan\\code\\ZG\\unir_dividir_pdf\\app.py', reloading
+[2025-05-23 17:51:33,818] WARNING in _internal:  * Debugger is active!
+[2025-05-23 17:51:33,833] INFO in _internal:  * Debugger PIN: 382-593-069
+[2025-05-23 17:53:04,946] INFO in _internal: 10.1.39.126 - - [23/May/2025 17:53:04] "GET / HTTP/1.1" 200 -
+[2025-05-23 17:53:05,299] INFO in _internal: 10.1.39.126 - - [23/May/2025 17:53:05] "GET /static/style.css HTTP/1.1" 200 -
+[2025-05-23 17:53:05,371] INFO in _internal: 10.1.39.126 - - [23/May/2025 17:53:05] "GET /static/script.js HTTP/1.1" 200 -
+[2025-05-23 17:53:05,390] INFO in _internal: 10.1.39.126 - - [23/May/2025 17:53:05] "[36mGET /static/assets/zg.jpg HTTP/1.1[0m" 304 -
+[2025-05-23 17:53:42,089] INFO in _internal: 10.1.39.126 - - [23/May/2025 17:53:42] "GET / HTTP/1.1" 200 -
+[2025-05-23 17:53:42,145] INFO in _internal: 10.1.39.126 - - [23/May/2025 17:53:42] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+[2025-05-23 17:53:42,152] INFO in _internal: 10.1.39.126 - - [23/May/2025 17:53:42] "[36mGET /static/assets/zg.jpg HTTP/1.1[0m" 304 -
+[2025-05-23 17:53:42,157] INFO in _internal: 10.1.39.126 - - [23/May/2025 17:53:42] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+[2025-05-23 17:55:07,758] INFO in app: Recebido pedido de split: 3 arquivo(s), 1 partes.
+[2025-05-23 17:55:07,760] INFO in app: Dividindo '20250522134437821 - Copia (3).pdf' com 1 páginas em 1 partes.
+[2025-05-23 17:55:07,767] INFO in app: Arquivo '20250522134437821 - Copia (3).pdf' dividido com sucesso.
+[2025-05-23 17:55:07,767] INFO in app: Dividindo '20250522134437821 - Copia (4) - Copia.pdf' com 1 páginas em 1 partes.
+[2025-05-23 17:55:07,774] INFO in app: Arquivo '20250522134437821 - Copia (4) - Copia.pdf' dividido com sucesso.
+[2025-05-23 17:55:07,777] INFO in app: Dividindo 'Certificados Excel - Copia (4).pdf' com 16 páginas em 1 partes.
+[2025-05-23 17:55:08,033] INFO in app: Arquivo 'Certificados Excel - Copia (4).pdf' dividido com sucesso.
+[2025-05-23 17:55:08,034] INFO in app: Split concluído com sucesso.
+[2025-05-23 17:55:08,036] INFO in _internal: 10.1.39.126 - - [23/May/2025 17:55:08] "POST /split HTTP/1.1" 200 -
+[2025-05-23 17:55:29,002] INFO in _internal: 10.1.39.126 - - [23/May/2025 17:55:29] "GET / HTTP/1.1" 200 -
+[2025-05-23 17:55:29,103] INFO in _internal: 10.1.39.126 - - [23/May/2025 17:55:29] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+[2025-05-23 17:55:29,139] INFO in _internal: 10.1.39.126 - - [23/May/2025 17:55:29] "[36mGET /static/assets/zg.jpg HTTP/1.1[0m" 304 -
+[2025-05-23 17:55:29,141] INFO in _internal: 10.1.39.126 - - [23/May/2025 17:55:29] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+[2025-05-23 17:55:35,596] INFO in app: Recebido pedido de split: 1 arquivo(s), 2 partes.
+[2025-05-23 17:55:35,600] INFO in app: Dividindo 'Certificados Excel - Copia (5) - Copia.pdf' com 16 páginas em 2 partes.
+[2025-05-23 17:55:35,904] INFO in app: Arquivo 'Certificados Excel - Copia (5) - Copia.pdf' dividido com sucesso.
+[2025-05-23 17:55:35,904] INFO in app: Split concluído com sucesso.
+[2025-05-23 17:55:35,909] INFO in _internal: 10.1.39.126 - - [23/May/2025 17:55:35] "POST /split HTTP/1.1" 200 -
+[2025-05-23 17:56:42,371] INFO in _internal: 10.1.39.126 - - [23/May/2025 17:56:42] "GET / HTTP/1.1" 200 -
+[2025-05-23 17:56:42,450] INFO in _internal: 10.1.39.126 - - [23/May/2025 17:56:42] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+[2025-05-23 17:56:42,455] INFO in _internal: 10.1.39.126 - - [23/May/2025 17:56:42] "[36mGET /static/assets/zg.jpg HTTP/1.1[0m" 304 -
+[2025-05-23 17:56:42,457] INFO in _internal: 10.1.39.126 - - [23/May/2025 17:56:42] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+[2025-05-23 17:57:55,427] INFO in _internal: 10.1.39.126 - - [23/May/2025 17:57:55] "GET / HTTP/1.1" 200 -
+[2025-05-23 17:57:55,497] INFO in _internal: 10.1.39.126 - - [23/May/2025 17:57:55] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+[2025-05-23 17:57:55,510] INFO in _internal: 10.1.39.126 - - [23/May/2025 17:57:55] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+[2025-05-23 17:57:55,511] INFO in _internal: 10.1.39.126 - - [23/May/2025 17:57:55] "[36mGET /static/assets/zg.jpg HTTP/1.1[0m" 304 -
