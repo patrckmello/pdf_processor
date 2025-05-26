@@ -1,5 +1,7 @@
-let selectedFiles = [];  // substitui selectedFile para múltiplos arquivos
+let allFiles = [];
+let selectedFiles = [];  
 let selectedCompression = null;
+let sortableInstance = null;
 
 const dropZone = document.getElementById('drop-zone');
 const fileInput = document.getElementById('fileInput');
@@ -18,11 +20,7 @@ const errorMessage2 = document.getElementById('error-message2');
 const errorMessage3 = document.getElementById('error-message3');
 const startMergeBtn = document.getElementById('start-merge');
 const startSplitBtn = document.getElementById('start-split');
-
-
 const previewContainer = document.getElementById('sortable-preview');
-
-let sortableInstance = null;
 
 dropZone.addEventListener('click', () => fileInput.click());
 
@@ -61,21 +59,26 @@ function hideAllErrors() {
 
 // Função que trata os arquivos selecionados, gera previews e atualiza botões
 async function handleFiles(files) {
-    selectedFiles = Array.from(files);
-
     hideAllErrors();
 
-    previewContainer.innerHTML = '';
+    const newFiles = Array.from(files);
+
+    // Impede arquivos duplicados
+    newFiles.forEach(file => {
+        if (!selectedFiles.some(f => f.name === file.name && f.size === file.size)) {
+            selectedFiles.push(file);
+        }
+    });
+
     document.getElementById('preview-container-grid').style.display = 'block';
 
-    for (let i = 0; i < selectedFiles.length; i++) {
+    for (let i = selectedFiles.length - newFiles.length; i < selectedFiles.length; i++) {
         const file = selectedFiles[i];
         const fileReader = new FileReader();
 
         await new Promise((resolve) => {
             fileReader.onload = async function () {
                 const typedarray = new Uint8Array(this.result);
-
                 const pdf = await pdfjsLib.getDocument(typedarray).promise;
                 const page = await pdf.getPage(1);
                 const viewport = page.getViewport({ scale: 0.4 });
@@ -86,34 +89,25 @@ async function handleFiles(files) {
 
                 const canvas = document.createElement('canvas');
                 canvas.classList.add('preview-canvas');
-                const context = canvas.getContext('2d');
                 canvas.height = viewport.height;
                 canvas.width = viewport.width;
 
+                const context = canvas.getContext('2d');
                 await page.render({ canvasContext: context, viewport }).promise;
 
                 // Botão de remover
                 const removeBtn = document.createElement('button');
-                removeBtn.textContent = '×'; // um "x"
+                removeBtn.textContent = '×';
                 removeBtn.classList.add('remove-btn');
                 removeBtn.title = 'Remover arquivo';
 
                 removeBtn.addEventListener('click', () => {
-                    // Remove o preview da tela
+                    const index = parseInt(wrapper.getAttribute('data-index'));
                     previewContainer.removeChild(wrapper);
-
-                    // Remove o arquivo do array selectedFiles
-                    const idx = parseInt(wrapper.getAttribute('data-index'));
-                    selectedFiles.splice(idx, 1);
-
-                    // Atualizar os data-index dos previews restantes
-                    const previews = previewContainer.querySelectorAll('.preview-wrapper');
-                    previews.forEach((prev, newIndex) => {
-                        prev.setAttribute('data-index', newIndex);
-                    });
-
-                    // Atualiza estado dos botões, etc
+                    selectedFiles.splice(index, 1);
+                    updatePreviewIndices();
                     updateMergeButtonState();
+                    checkPreviewVisibility();
                 });
 
                 wrapper.appendChild(canvas);
@@ -126,9 +120,7 @@ async function handleFiles(files) {
         });
     }
 
-    if (sortableInstance) {
-        sortableInstance.destroy();
-    }
+    if (sortableInstance) sortableInstance.destroy();
     sortableInstance = Sortable.create(previewContainer, {
         animation: 150,
         ghostClass: 'sortable-ghost',
@@ -138,6 +130,7 @@ async function handleFiles(files) {
     });
 
     updateMergeButtonState();
+    checkPreviewVisibility();
 }
 
 // Habilita ou desabilita botão "Unir PDFs" conforme previews
@@ -199,6 +192,22 @@ function resetApp() {
     console.log('Aplicativo resetado após download e cooldown.');
 }
 
+function updatePreviewIndices() {
+    const previews = previewContainer.querySelectorAll('.preview-wrapper');
+    previews.forEach((prev, newIndex) => {
+        prev.setAttribute('data-index', newIndex);
+    });
+}
+
+function checkPreviewVisibility() {
+    const containerGrid = document.getElementById('preview-container-grid');
+    if (selectedFiles.length === 0) {
+        containerGrid.style.display = 'none';
+    } else {
+        containerGrid.style.display = 'block';
+    }
+}
+
 // Fechar os menus ao clicar no botão fechar
 closeBtn.addEventListener('click', () => {
     closeMergeMenu();
@@ -238,13 +247,11 @@ startMergeBtn.addEventListener('click', () => {
         return;
     }
 
-    const canvases = previewContainer.querySelectorAll('canvas.preview-canvas');
+    const wrappers = previewContainer.querySelectorAll('.preview-wrapper');
     const orderedFiles = [];
 
-    console.log('Canvases encontrados:', canvases.length);
-
-    canvases.forEach(canvas => {
-        const idx = parseInt(canvas.getAttribute('data-index'));
+    wrappers.forEach(wrapper => {
+        const idx = parseInt(wrapper.getAttribute('data-index'));
         console.log('Canvas data-index:', idx);
 
         if (!isNaN(idx)) {
@@ -311,7 +318,7 @@ startSplitBtn.addEventListener('click', async () => {
         return;
     }
 
-    if (isNaN(parts) || parts < 1) {
+    if (isNaN(parts) || parts < 2) {
         errorMessage2.textContent = '⚠️ Número de partes inválido.';
         errorMessage2.style.display = 'block';
         return;
