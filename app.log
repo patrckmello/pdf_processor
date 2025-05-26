@@ -82,3 +82,84 @@
 [2025-05-23 17:57:55,497] INFO in _internal: 10.1.39.126 - - [23/May/2025 17:57:55] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
 [2025-05-23 17:57:55,510] INFO in _internal: 10.1.39.126 - - [23/May/2025 17:57:55] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
 [2025-05-23 17:57:55,511] INFO in _internal: 10.1.39.126 - - [23/May/2025 17:57:55] "[36mGET /static/assets/zg.jpg HTTP/1.1[0m" 304 -
+[2025-05-26 12:39:28,211] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5007
+ * Running on http://10.1.39.126:5007
+[2025-05-26 12:39:28,212] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2025-05-26 12:39:28,216] INFO in _internal:  * Restarting with stat
+[2025-05-26 12:39:28,941] WARNING in _internal:  * Debugger is active!
+[2025-05-26 12:39:28,949] INFO in _internal:  * Debugger PIN: 382-593-069
+[2025-05-26 12:39:32,014] INFO in _internal: 127.0.0.1 - - [26/May/2025 12:39:32] "GET / HTTP/1.1" 200 -
+[2025-05-26 12:39:32,321] INFO in _internal: 127.0.0.1 - - [26/May/2025 12:39:32] "GET /static/assets/zg.jpg HTTP/1.1" 200 -
+[2025-05-26 12:39:32,420] INFO in _internal: 127.0.0.1 - - [26/May/2025 12:39:32] "GET /static/style.css HTTP/1.1" 200 -
+[2025-05-26 12:39:32,554] INFO in _internal: 127.0.0.1 - - [26/May/2025 12:39:32] "GET /static/script.js HTTP/1.1" 200 -
+[2025-05-26 12:40:21,452] INFO in app: Recebido pedido de split: 1 arquivo(s), 2 partes.
+[2025-05-26 12:40:21,511] INFO in app: Dividindo 'Certificados Excel - Copia (5) - Copia.pdf' com 16 páginas em 2 partes.
+[2025-05-26 12:40:21,833] INFO in app: Arquivo 'Certificados Excel - Copia (5) - Copia.pdf' dividido com sucesso.
+[2025-05-26 12:40:21,834] INFO in app: Split concluído com sucesso.
+[2025-05-26 12:40:21,835] INFO in _internal: 127.0.0.1 - - [26/May/2025 12:40:21] "POST /split HTTP/1.1" 200 -
+[2025-05-26 12:44:10,553] INFO in _internal: 127.0.0.1 - - [26/May/2025 12:44:10] "GET / HTTP/1.1" 200 -
+[2025-05-26 12:44:10,658] INFO in _internal: 127.0.0.1 - - [26/May/2025 12:44:10] "[36mGET /static/assets/zg.jpg HTTP/1.1[0m" 304 -
+[2025-05-26 12:44:10,660] INFO in _internal: 127.0.0.1 - - [26/May/2025 12:44:10] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+[2025-05-26 12:44:10,664] INFO in _internal: 127.0.0.1 - - [26/May/2025 12:44:10] "GET /static/script.js HTTP/1.1" 200 -
+[2025-05-26 12:44:16,836] INFO in app: Recebido pedido de merge com 2 arquivo(s).
+[2025-05-26 12:44:16,838] INFO in app: Arquivo '20250522134437821 - Copia (4) - Copia.pdf' adicionado com sucesso ao merge.
+[2025-05-26 12:44:16,853] INFO in app: Arquivo 'Certificados Excel - Copia (5) - Copia.pdf' adicionado com sucesso ao merge.
+[2025-05-26 12:44:16,909] INFO in app: Merge concluído com sucesso.
+[2025-05-26 12:44:16,915] INFO in _internal: 127.0.0.1 - - [26/May/2025 12:44:16] "POST /merge HTTP/1.1" 200 -
+[2025-05-26 12:48:53,935] INFO in _internal: 127.0.0.1 - - [26/May/2025 12:48:53] "GET / HTTP/1.1" 200 -
+[2025-05-26 12:48:54,012] INFO in _internal: 127.0.0.1 - - [26/May/2025 12:48:54] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+[2025-05-26 12:48:54,026] INFO in _internal: 127.0.0.1 - - [26/May/2025 12:48:54] "[36mGET /static/assets/zg.jpg HTTP/1.1[0m" 304 -
+[2025-05-26 12:48:54,099] INFO in _internal: 127.0.0.1 - - [26/May/2025 12:48:54] "GET /static/script.js HTTP/1.1" 200 -
+[2025-05-26 12:50:41,018] INFO in _internal: 127.0.0.1 - - [26/May/2025 12:50:41] "GET / HTTP/1.1" 200 -
+[2025-05-26 12:50:41,091] INFO in _internal: 127.0.0.1 - - [26/May/2025 12:50:41] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+[2025-05-26 12:50:41,105] INFO in _internal: 127.0.0.1 - - [26/May/2025 12:50:41] "[36mGET /static/assets/zg.jpg HTTP/1.1[0m" 304 -
+[2025-05-26 12:50:41,109] INFO in _internal: 127.0.0.1 - - [26/May/2025 12:50:41] "GET /static/script.js HTTP/1.1" 200 -
+[2025-05-26 12:51:32,353] INFO in _internal: 127.0.0.1 - - [26/May/2025 12:51:32] "GET / HTTP/1.1" 200 -
+[2025-05-26 12:51:32,415] INFO in _internal: 127.0.0.1 - - [26/May/2025 12:51:32] "[36mGET /static/assets/zg.jpg HTTP/1.1[0m" 304 -
+[2025-05-26 12:51:32,416] INFO in _internal: 127.0.0.1 - - [26/May/2025 12:51:32] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+[2025-05-26 12:51:32,425] INFO in _internal: 127.0.0.1 - - [26/May/2025 12:51:32] "GET /static/script.js HTTP/1.1" 200 -
+[2025-05-26 12:53:11,921] INFO in _internal: 127.0.0.1 - - [26/May/2025 12:53:11] "GET / HTTP/1.1" 200 -
+[2025-05-26 12:53:11,988] INFO in _internal: 127.0.0.1 - - [26/May/2025 12:53:11] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+[2025-05-26 12:53:11,991] INFO in _internal: 127.0.0.1 - - [26/May/2025 12:53:11] "[36mGET /static/assets/zg.jpg HTTP/1.1[0m" 304 -
+[2025-05-26 12:53:11,991] INFO in _internal: 127.0.0.1 - - [26/May/2025 12:53:11] "GET /static/script.js HTTP/1.1" 200 -
+[2025-05-26 12:53:36,224] INFO in _internal: 127.0.0.1 - - [26/May/2025 12:53:36] "GET / HTTP/1.1" 200 -
+[2025-05-26 12:53:36,297] INFO in _internal: 127.0.0.1 - - [26/May/2025 12:53:36] "[36mGET /static/assets/zg.jpg HTTP/1.1[0m" 304 -
+[2025-05-26 12:53:36,300] INFO in _internal: 127.0.0.1 - - [26/May/2025 12:53:36] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+[2025-05-26 12:53:36,306] INFO in _internal: 127.0.0.1 - - [26/May/2025 12:53:36] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+[2025-05-26 12:55:03,222] INFO in _internal: 127.0.0.1 - - [26/May/2025 12:55:03] "GET / HTTP/1.1" 200 -
+[2025-05-26 12:55:03,278] INFO in _internal: 127.0.0.1 - - [26/May/2025 12:55:03] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+[2025-05-26 12:55:03,281] INFO in _internal: 127.0.0.1 - - [26/May/2025 12:55:03] "[36mGET /static/assets/zg.jpg HTTP/1.1[0m" 304 -
+[2025-05-26 12:55:03,288] INFO in _internal: 127.0.0.1 - - [26/May/2025 12:55:03] "GET /static/script.js HTTP/1.1" 200 -
+[2025-05-26 12:55:13,552] INFO in _internal: 127.0.0.1 - - [26/May/2025 12:55:13] "GET / HTTP/1.1" 200 -
+[2025-05-26 12:55:13,624] INFO in _internal: 127.0.0.1 - - [26/May/2025 12:55:13] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+[2025-05-26 12:55:13,701] INFO in _internal: 127.0.0.1 - - [26/May/2025 12:55:13] "[36mGET /static/assets/zg.jpg HTTP/1.1[0m" 304 -
+[2025-05-26 12:55:13,719] INFO in _internal: 127.0.0.1 - - [26/May/2025 12:55:13] "GET /static/script.js HTTP/1.1" 200 -
+[2025-05-26 12:57:37,709] INFO in _internal: 127.0.0.1 - - [26/May/2025 12:57:37] "GET / HTTP/1.1" 200 -
+[2025-05-26 12:57:37,787] INFO in _internal: 127.0.0.1 - - [26/May/2025 12:57:37] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+[2025-05-26 12:57:37,788] INFO in _internal: 127.0.0.1 - - [26/May/2025 12:57:37] "[36mGET /static/assets/zg.jpg HTTP/1.1[0m" 304 -
+[2025-05-26 12:57:37,789] INFO in _internal: 127.0.0.1 - - [26/May/2025 12:57:37] "GET /static/script.js HTTP/1.1" 200 -
+[2025-05-26 12:57:59,638] INFO in app: Recebido pedido de split: 2 arquivo(s), 1 partes.
+[2025-05-26 12:57:59,639] INFO in app: Dividindo '20250522134437821 - Copia (4) - Copia.pdf' com 1 páginas em 1 partes.
+[2025-05-26 12:57:59,646] INFO in app: Arquivo '20250522134437821 - Copia (4) - Copia.pdf' dividido com sucesso.
+[2025-05-26 12:57:59,651] INFO in app: Dividindo 'Certificados Excel - Copia (5) - Copia.pdf' com 16 páginas em 1 partes.
+[2025-05-26 12:57:59,945] INFO in app: Arquivo 'Certificados Excel - Copia (5) - Copia.pdf' dividido com sucesso.
+[2025-05-26 12:57:59,947] INFO in app: Split concluído com sucesso.
+[2025-05-26 12:57:59,949] INFO in _internal: 127.0.0.1 - - [26/May/2025 12:57:59] "POST /split HTTP/1.1" 200 -
+[2025-05-26 12:58:53,661] INFO in _internal: 127.0.0.1 - - [26/May/2025 12:58:53] "GET / HTTP/1.1" 200 -
+[2025-05-26 12:58:53,774] INFO in _internal: 127.0.0.1 - - [26/May/2025 12:58:53] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+[2025-05-26 12:58:53,791] INFO in _internal: 127.0.0.1 - - [26/May/2025 12:58:53] "[36mGET /static/assets/zg.jpg HTTP/1.1[0m" 304 -
+[2025-05-26 12:58:53,829] INFO in _internal: 127.0.0.1 - - [26/May/2025 12:58:53] "GET /static/script.js HTTP/1.1" 200 -
+[2025-05-26 13:00:44,871] INFO in _internal: 127.0.0.1 - - [26/May/2025 13:00:44] "GET / HTTP/1.1" 200 -
+[2025-05-26 13:00:44,933] INFO in _internal: 127.0.0.1 - - [26/May/2025 13:00:44] "GET /static/style.css HTTP/1.1" 200 -
+[2025-05-26 13:00:44,943] INFO in _internal: 127.0.0.1 - - [26/May/2025 13:00:44] "[36mGET /static/assets/zg.jpg HTTP/1.1[0m" 304 -
+[2025-05-26 13:00:44,948] INFO in _internal: 127.0.0.1 - - [26/May/2025 13:00:44] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+[2025-05-26 13:01:15,097] INFO in _internal: 127.0.0.1 - - [26/May/2025 13:01:15] "GET / HTTP/1.1" 200 -
+[2025-05-26 13:01:15,164] INFO in _internal: 127.0.0.1 - - [26/May/2025 13:01:15] "GET /static/style.css HTTP/1.1" 200 -
+[2025-05-26 13:01:15,173] INFO in _internal: 127.0.0.1 - - [26/May/2025 13:01:15] "[36mGET /static/assets/zg.jpg HTTP/1.1[0m" 304 -
+[2025-05-26 13:01:15,178] INFO in _internal: 127.0.0.1 - - [26/May/2025 13:01:15] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+[2025-05-26 13:01:32,405] INFO in _internal: 127.0.0.1 - - [26/May/2025 13:01:32] "GET / HTTP/1.1" 200 -
+[2025-05-26 13:01:32,474] INFO in _internal: 127.0.0.1 - - [26/May/2025 13:01:32] "GET /static/style.css HTTP/1.1" 200 -
+[2025-05-26 13:01:32,502] INFO in _internal: 127.0.0.1 - - [26/May/2025 13:01:32] "[36mGET /static/assets/zg.jpg HTTP/1.1[0m" 304 -
+[2025-05-26 13:01:32,538] INFO in _internal: 127.0.0.1 - - [26/May/2025 13:01:32] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
