@@ -1,6 +1,6 @@
 let allFiles = [];
 let selectedFiles = [];  
-let selectedCompression = null;
+let selectedSplitMode = null;
 let sortableInstance = null;
 
 const dropZone = document.getElementById('drop-zone');
@@ -24,6 +24,9 @@ const previewContainer = document.getElementById('sortable-preview');
 const sortMenu = document.getElementById('sort-menu');
 const sortAscBtn = document.getElementById('sort-asc-btn');
 const sortDescBtn = document.getElementById('sort-desc-btn');
+const modeButtons = document.querySelectorAll('.mode-btn');
+const partsOption = document.getElementById('parts-option');
+const sizeOption = document.getElementById('size-option');
 
 dropZone.addEventListener('click', () => fileInput.click());
 
@@ -79,7 +82,7 @@ function isNumericName(name) {
     return /^\d+$/.test(name.split('.').shift());
 }
 
-sortAscBtn.addEventListener('click', () => {
+sortAscBtn.addEventListener('click', async () => {
     console.log('Ordenar crescente');
     sortMenu.style.display = 'none';
 
@@ -89,13 +92,13 @@ sortAscBtn.addEventListener('click', () => {
         if (isNumericName(nameA) && isNumericName(nameB)) {
             return Number(nameA) - Number(nameB); 
         }
-        return a.name.localeCompare(b.name); 
+        return nameA.localeCompare(nameB); 
     });
 
-    rebuildPreviews();
+    await rebuildPreviews();
 });
 
-sortDescBtn.addEventListener('click', () => {
+sortDescBtn.addEventListener('click', async () => {
     console.log('Ordenar decrescente');
     sortMenu.style.display = 'none';
 
@@ -105,19 +108,35 @@ sortDescBtn.addEventListener('click', () => {
         if (isNumericName(nameA) && isNumericName(nameB)) {
             return Number(nameB) - Number(nameA); 
         }
-        return b.name.localeCompare(a.name); 
+        return nameB.localeCompare(nameA); 
     });
 
-    rebuildPreviews();
+    await rebuildPreviews();
 });
 
-function rebuildPreviews() {
+async function rebuildPreviews() {
     console.log('Reconstruindo previews...');
     previewContainer.innerHTML = '';
 
-    selectedFiles.forEach(async (file, index) => {  // Inclui o índice aqui
-        const fileReader = new FileReader();
+    for (let i = 0; i < selectedFiles.length; i++) {
+        const file = selectedFiles[i];
+        await createPreview(file, i);
+    }
 
+    updatePreviewIndices();
+    updateMergeButtonState();
+    checkPreviewVisibility();
+
+    if (sortableInstance) sortableInstance.destroy();
+    sortableInstance = Sortable.create(previewContainer, {
+        animation: 150,
+        ghostClass: 'sortable-ghost',
+    });
+}
+
+function createPreview(file, index) {
+    return new Promise((resolve) => {
+        const fileReader = new FileReader();
         fileReader.onload = async function () {
             const typedarray = new Uint8Array(this.result);
             const pdf = await pdfjsLib.getDocument(typedarray).promise;
@@ -126,7 +145,6 @@ function rebuildPreviews() {
 
             const wrapper = document.createElement('div');
             wrapper.classList.add('preview-wrapper');
-            // Atualiza o data-index para refletir a nova ordem
             wrapper.setAttribute('data-index', index);
             wrapper.setAttribute('data-filename', file.name);
 
@@ -144,42 +162,29 @@ function rebuildPreviews() {
             removeBtn.title = 'Remover arquivo';
 
             removeBtn.addEventListener('click', () => {
+                // Remover preview e arquivo do array
                 previewContainer.removeChild(wrapper);
-
-                const indexToRemove = selectedFiles.findIndex(f => f.name === file.name);
-                if (indexToRemove !== -1) {
-                    selectedFiles.splice(indexToRemove, 1);
+                const idx = selectedFiles.findIndex(f => f.name === file.name);
+                if (idx !== -1) {
+                    selectedFiles.splice(idx, 1);
                 }
-
-                updatePreviewIndices();
-                updateMergeButtonState();
-                checkPreviewVisibility();
+                rebuildPreviews(); // Reconstruir para atualizar índices
             });
 
             const fileName = document.createElement('p');
             fileName.textContent = file.name;
             fileName.classList.add('file-name');
+
             wrapper.appendChild(fileName);
             wrapper.appendChild(canvas);
             wrapper.appendChild(removeBtn);
             previewContainer.appendChild(wrapper);
-        };
 
+            resolve();
+        };
         fileReader.readAsArrayBuffer(file);
     });
-
-    updatePreviewIndices();
-    updateMergeButtonState();
-    checkPreviewVisibility();
-
-    if (sortableInstance) sortableInstance.destroy();
-    sortableInstance = Sortable.create(previewContainer, {
-        animation: 150,
-        ghostClass: 'sortable-ghost',
-    });
 }
-
-
 
 // Função que trata os arquivos selecionados, gera previews e atualiza botões
 async function handleFiles(files) {
@@ -327,6 +332,14 @@ function hideSpinner() {
   });
 }
 
+document.querySelectorAll('input[name="split-mode"]').forEach((radio) => {
+    radio.addEventListener('change', () => {
+        const mode = document.querySelector('input[name="split-mode"]:checked').value;
+        document.getElementById('parts-option').style.display = mode === 'parts' ? 'block' : 'none';
+        document.getElementById('size-option').style.display = mode === 'size' ? 'block' : 'none';
+    });
+});
+
 // Fechar os menus ao clicar no botão fechar
 closeBtn.addEventListener('click', () => {
     closeMergeMenu();
@@ -376,18 +389,11 @@ startMergeBtn.addEventListener('click', () => {
     const orderedFiles = [];
 
     wrappers.forEach(wrapper => {
-        const idx = parseInt(wrapper.getAttribute('data-index'));
-        console.log('Canvas data-index:', idx);
-
-        if (!isNaN(idx)) {
-            const file = selectedFiles[idx];
-            console.log('Arquivo correspondente:', file?.name);
-
-            if (file) {
-                orderedFiles.push(file);
-            }
-        }
+        const filename = wrapper.getAttribute('data-filename');
+        const file = selectedFiles.find(f => f.name === filename);
+        if (file) orderedFiles.push(file);
     });
+
 
     console.log('Arquivos selecionados para unir:', orderedFiles);
 
@@ -444,78 +450,133 @@ startSplitBtn.addEventListener('click', async () => {
         return;
     }
 
-    const partsInput = document.getElementById('split-parts-input');
-    const parts = parseInt(partsInput.value);
-
-    if (isNaN(parts) || parts < 2) {
+    const selectedModeBtn = document.querySelector('.mode-btn.active');
+    if (!selectedModeBtn) {
         hideSpinner();
-        errorMessage2.textContent = '⚠️ Número de partes inválido.';
+        errorMessage2.textContent = '⚠️ Por favor, selecione um modo de divisão.';
         errorMessage2.style.display = 'block';
         return;
     }
+    const mode = selectedModeBtn.dataset.mode;
+    const formData = new FormData();
 
-    // Validação para não dividir em mais partes que páginas
     for (let file of selectedFiles) {
-        try {
-            const buffer = await new Promise(resolve => {
-                const reader = new FileReader();
-                reader.onload = () => resolve(reader.result);
-                reader.readAsArrayBuffer(file);
-            });
+        formData.append('pdfs', file);
+    }
 
-            const pdf = await pdfjsLib.getDocument(new Uint8Array(buffer)).promise;
-            const numPages = pdf.numPages;
+    formData.append('mode', mode);
 
-            if (parts > numPages) {
-                hideSpinner();
-                errorMessage2.textContent = `⚠️ O arquivo "${file.name}" tem apenas ${numPages} página(s). Não é possível dividir em ${parts} partes.`;
-                errorMessage2.style.display = 'block';
-                return;
-            }
-        } catch (e) {
+    if (mode === 'parts') {
+        const partsInput = document.getElementById('split-parts-input');
+        const parts = parseInt(partsInput.value);
+
+        if (isNaN(parts) || parts < 2) {
             hideSpinner();
-            console.error(`Erro ao processar o arquivo "${file.name}":`, e);
-            errorMessage2.textContent = `⚠️ Erro ao processar o arquivo "${file.name}".`;
+            errorMessage2.textContent = '⚠️ Número de partes inválido.';
             errorMessage2.style.display = 'block';
             return;
         }
+
+        // Validação de páginas
+        for (let file of selectedFiles) {
+            try {
+                const buffer = await new Promise(resolve => {
+                    const reader = new FileReader();
+                    reader.onload = () => resolve(reader.result);
+                    reader.readAsArrayBuffer(file);
+                });
+
+                const pdf = await pdfjsLib.getDocument(new Uint8Array(buffer)).promise;
+                const numPages = pdf.numPages;
+
+                if (parts > numPages) {
+                    hideSpinner();
+                    errorMessage2.textContent = `⚠️ O arquivo "${file.name}" tem apenas ${numPages} página(s). Não é possível dividir em ${parts} partes.`;
+                    errorMessage2.style.display = 'block';
+                    return;
+                }
+            } catch (e) {
+                hideSpinner();
+                console.error(`Erro ao processar o arquivo "${file.name}":`, e);
+                errorMessage2.textContent = `⚠️ Erro ao processar o arquivo "${file.name}".`;
+                errorMessage2.style.display = 'block';
+                return;
+            }
+        }
+
+        formData.append('parts', parts);
+    } else if (mode === 'size') {
+        const sizeInput = document.getElementById('split-size-input');
+        const sizeMB = parseFloat(sizeInput.value);
+
+        if (isNaN(sizeMB) || sizeMB < 0.1) {
+            hideSpinner();
+            errorMessage2.textContent = '⚠️ Tamanho inválido. Informe um valor em MB (mínimo 0.1).';
+            errorMessage2.style.display = 'block';
+            return;
+        }
+
+        formData.append('max_size_mb', sizeMB);
     }
 
-    const formData = new FormData();
-    selectedFiles.forEach(file => formData.append('files', file));
-    formData.append('parts', parts);
+    try {
+        const response = await fetch('/split', {
+            method: 'POST',
+            body: formData
+        });
 
-    fetch('/split', {
-        method: 'POST',
-        body: formData
-    })
-    .then(response => {
-        if (!response.ok) {
-            throw new Error('Erro ao dividir o PDF');
-        }
-        return response.blob();
-    })
-    .then(blob => {
+        if (!response.ok) throw new Error('Erro na resposta do servidor.');
+
+        const blob = await response.blob();
         const url = window.URL.createObjectURL(blob);
         const a = document.createElement('a');
         a.href = url;
-        a.download = 'divididos.zip';
+        a.download = 'split_result.zip';
         document.body.appendChild(a);
         a.click();
         a.remove();
-        window.URL.revokeObjectURL(url);
-        setTimeout(() => {
-            resetApp();
-        }, 3000);
-    })
-    .catch(error => {
-        hideSpinner();
-        console.error('Erro:', error);
-        errorMessage2.textContent = '⚠️ Ocorreu um erro ao dividir os arquivos.';
+    } catch (error) {
+        console.error('Erro ao dividir PDF:', error);
+        errorMessage2.textContent = '⚠️ Ocorreu um erro ao dividir o PDF.';
         errorMessage2.style.display = 'block';
-    });
-
-    closeSplitMenu();
+    } finally {
+        hideSpinner();
+    }
 });
 
+modeButtons.forEach(btn => {
+  btn.addEventListener('click', () => {
+    // Remove active de todos
+    modeButtons.forEach(b => b.classList.remove('active'));
+    // Ativa o clicado
+    btn.classList.add('active');
 
+    if (btn.dataset.mode === 'parts') {
+      partsOption.style.display = 'block';
+      sizeOption.style.display = 'none';
+    } else if (btn.dataset.mode === 'size') {
+      partsOption.style.display = 'none';
+      sizeOption.style.display = 'block';
+    }
+  });
+});
+
+modeButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        // Atualiza o modo selecionado
+        selectedSplitMode = button.getAttribute('data-mode');
+
+        // Remove o estilo ativo de todos e aplica no selecionado
+        modeButtons.forEach(btn => btn.classList.remove('active-mode'));
+        button.classList.add('active-mode');
+
+        // Mostra o campo correspondente
+        if (selectedSplitMode === 'parts') {
+            partsOption.style.display = 'block';
+            sizeOption.style.display = 'none';
+        } else if (selectedSplitMode === 'size') {
+            sizeOption.style.display = 'block';
+            partsOption.style.display = 'none';
+        }
+    });
+});

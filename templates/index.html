@@ -57,13 +57,25 @@
         <div class="split-menu" id="splitMenu">
             <button class="close-btn" onclick="closeSplitMenu()">×</button>
             <h3>Escolha o modo de divisão</h3>
-            <div class="split-option">
-                <p>Em quantas partes você gostaria de dividir?</p>
-                <input type="number" id="split-parts-input" min="1" value="2" style="width: 60px; text-align:center;" />
+
+            <div class="split-mode">
+                <button type="button" class="mode-btn" data-mode="parts">Por número de partes</button>
+                <button type="button" class="mode-btn" data-mode="size">Por tamanho (MB)</button>
             </div>
-            <button id="start-split" onclick="startSplit()">Dividir PDFs</button>
+
+            <div class="split-option" id="parts-option">
+                <p>Em quantas partes você gostaria de dividir?</p>
+                <input type="number" id="split-parts-input" min="1" value="2"/>
+            </div>
+
+            <div class="split-option" id="size-option">
+                <p>Qual o tamanho máximo de cada parte (em MB)?</p>
+                <input type="number" id="split-size-input" min="1" value="2"/>
+            </div>
+
+            <button id="start-split">Dividir PDF</button>
             <div id="loading-spinner" class="spinner hidden"></div>
-        </div>    
+        </div>  
         </main>
             
     <footer>

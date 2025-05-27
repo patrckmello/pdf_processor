@@ -319,10 +319,19 @@ main {
     z-index: 10;
 }
 
-#start-split:hover {
+#start-split:hover:not(:disabled) {
     background-color: #115cce;
     transform: translateX(-50%) scale(1.1);
     max-width: 740px; 
+}
+
+/* Quando estiver desabilitado */
+#start-split:disabled {
+    background-color: #888888;
+    cursor: not-allowed;
+    opacity: 0.6;
+    transform: translateX(-50%) scale(1);
+    max-width: 700px;
 }
 
 .split-option {
@@ -339,7 +348,8 @@ main {
     margin-bottom: 12px;
 }
 
-#split-parts-input {
+#split-parts-input,
+#split-size-input {
     width: 80px;
     padding: 8px 10px;
     font-size: 18px;
@@ -351,9 +361,49 @@ main {
     font-family: 'Poppins', sans-serif;
 }
 
-#split-parts-input:focus {
-    border-color: #005bb5;
-    box-shadow: 0 0 8px rgba(0, 140, 255, 0.5);
+#split-parts-input.active,
+#split-size-input.active {
+    background-color: #115cce; 
+    font-weight: bold;
+    transition: border 0.2s ease; 
+    padding: 14px;
+    transition: padding 0.3s ease;
+}
+
+#parts-option,
+#size-option {
+  display: none;
+}
+
+.mode-btn {
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    margin: 15px 0;
+    padding: 10px;
+    background-color: #008cff;
+    border-radius: 8px;
+    width: 95%;  /* largura maior */
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, opacity 0.3s ease, border 0.3s ease, padding 0.3s ease;
+    border: none;
+    user-select: none;
+}
+
+.mode-btn:hover {
+    background-color: #115cce;
+    transition: border 0.2s ease;
+    padding: 14px;
+    transition: padding 0.3s ease;
+}
+
+.mode-btn.active {
+    background-color: #115cce;
+    font-weight: bold;
+    transition: border 0.2s ease;
+    padding: 14px;
+    transition: padding 0.3s ease;
 }
 
 #functions-btn {
