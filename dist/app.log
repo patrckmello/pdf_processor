@@ -1,0 +1,104 @@
+[2025-05-26 13:17:28,189] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5007
+ * Running on http://10.1.39.126:5007
+[2025-05-26 13:17:28,190] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2025-05-26 13:17:28,220] INFO in _internal:  * Restarting with stat
+[2025-05-26 13:17:32,464] WARNING in _internal:  * Debugger is active!
+[2025-05-26 13:17:32,471] INFO in _internal:  * Debugger PIN: 370-349-957
+[2025-05-26 13:17:52,474] INFO in _internal: 10.1.39.126 - - [26/May/2025 13:17:52] "GET / HTTP/1.1" 200 -
+[2025-05-26 13:17:52,727] INFO in _internal: 10.1.39.126 - - [26/May/2025 13:17:52] "GET /static/assets/zg.jpg HTTP/1.1" 200 -
+[2025-05-26 13:17:52,729] INFO in _internal: 10.1.39.126 - - [26/May/2025 13:17:52] "GET /static/script.js HTTP/1.1" 200 -
+[2025-05-26 13:17:52,733] INFO in _internal: 10.1.39.126 - - [26/May/2025 13:17:52] "GET /static/style.css HTTP/1.1" 200 -
+[2025-05-26 13:18:03,271] INFO in app: Recebido pedido de merge com 2 arquivo(s).
+[2025-05-26 13:18:03,277] INFO in app: Arquivo '20250522134437821 - Copia (4) - Copia.pdf' adicionado com sucesso ao merge.
+[2025-05-26 13:18:03,286] INFO in app: Arquivo 'Certificados Excel - Copia (5) - Copia.pdf' adicionado com sucesso ao merge.
+[2025-05-26 13:18:03,335] INFO in app: Merge concluído com sucesso.
+[2025-05-26 13:18:03,338] INFO in _internal: 10.1.39.126 - - [26/May/2025 13:18:03] "POST /merge HTTP/1.1" 200 -
+[2025-05-26 13:18:27,289] INFO in app: Recebido pedido de merge com 2 arquivo(s).
+[2025-05-26 13:18:27,303] INFO in app: Arquivo 'Certificados Excel - Copia (5) - Copia.pdf' adicionado com sucesso ao merge.
+[2025-05-26 13:18:27,304] INFO in app: Arquivo '20250522134437821 - Copia (4) - Copia.pdf' adicionado com sucesso ao merge.
+[2025-05-26 13:18:27,352] INFO in app: Merge concluído com sucesso.
+[2025-05-26 13:18:27,354] INFO in _internal: 10.1.39.126 - - [26/May/2025 13:18:27] "POST /merge HTTP/1.1" 200 -
+[2025-05-26 13:19:22,586] INFO in _internal: 10.1.39.126 - - [26/May/2025 13:19:22] "GET / HTTP/1.1" 200 -
+[2025-05-26 13:19:22,667] INFO in _internal: 10.1.39.126 - - [26/May/2025 13:19:22] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+[2025-05-26 13:19:22,670] INFO in _internal: 10.1.39.126 - - [26/May/2025 13:19:22] "[36mGET /static/assets/zg.jpg HTTP/1.1[0m" 304 -
+[2025-05-26 13:19:22,688] INFO in _internal: 10.1.39.126 - - [26/May/2025 13:19:22] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+[2025-05-26 13:19:28,332] INFO in app: Recebido pedido de split: 1 arquivo(s), 2 partes.
+[2025-05-26 13:19:28,336] INFO in app: Dividindo '20250522134437821 - Copia (4) - Copia.pdf_unido.pdf' com 17 páginas em 2 partes.
+[2025-05-26 13:19:28,581] INFO in app: Arquivo '20250522134437821 - Copia (4) - Copia.pdf_unido.pdf' dividido com sucesso.
+[2025-05-26 13:19:28,582] INFO in app: Split concluído com sucesso.
+[2025-05-26 13:19:28,584] INFO in _internal: 10.1.39.126 - - [26/May/2025 13:19:28] "POST /split HTTP/1.1" 200 -
+[2025-05-26 13:19:28,925] INFO in app: Recebido pedido de split: 1 arquivo(s), 2 partes.
+[2025-05-26 13:19:28,934] INFO in app: Dividindo '20250522134437821 - Copia (4) - Copia.pdf_unido.pdf' com 17 páginas em 2 partes.
+[2025-05-26 13:19:29,073] INFO in app: Recebido pedido de split: 1 arquivo(s), 2 partes.
+[2025-05-26 13:19:29,077] INFO in app: Dividindo '20250522134437821 - Copia (4) - Copia.pdf_unido.pdf' com 17 páginas em 2 partes.
+[2025-05-26 13:19:29,220] INFO in app: Recebido pedido de split: 1 arquivo(s), 2 partes.
+[2025-05-26 13:19:29,224] INFO in app: Dividindo '20250522134437821 - Copia (4) - Copia.pdf_unido.pdf' com 17 páginas em 2 partes.
+[2025-05-26 13:19:29,353] INFO in app: Arquivo '20250522134437821 - Copia (4) - Copia.pdf_unido.pdf' dividido com sucesso.
+[2025-05-26 13:19:29,354] INFO in app: Split concluído com sucesso.
+[2025-05-26 13:19:29,357] INFO in _internal: 10.1.39.126 - - [26/May/2025 13:19:29] "POST /split HTTP/1.1" 200 -
+[2025-05-26 13:19:29,552] INFO in app: Arquivo '20250522134437821 - Copia (4) - Copia.pdf_unido.pdf' dividido com sucesso.
+[2025-05-26 13:19:29,552] INFO in app: Split concluído com sucesso.
+[2025-05-26 13:19:29,556] INFO in _internal: 10.1.39.126 - - [26/May/2025 13:19:29] "POST /split HTTP/1.1" 200 -
+[2025-05-26 13:19:29,749] INFO in app: Arquivo '20250522134437821 - Copia (4) - Copia.pdf_unido.pdf' dividido com sucesso.
+[2025-05-26 13:19:29,749] INFO in app: Split concluído com sucesso.
+[2025-05-26 13:19:29,753] INFO in _internal: 10.1.39.126 - - [26/May/2025 13:19:29] "POST /split HTTP/1.1" 200 -
+[2025-05-26 13:25:22,611] INFO in _internal: 10.1.39.126 - - [26/May/2025 13:25:22] "GET / HTTP/1.1" 200 -
+[2025-05-26 13:25:22,673] INFO in _internal: 10.1.39.126 - - [26/May/2025 13:25:22] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+[2025-05-26 13:25:22,687] INFO in _internal: 10.1.39.126 - - [26/May/2025 13:25:22] "[36mGET /static/assets/zg.jpg HTTP/1.1[0m" 304 -
+[2025-05-26 13:25:22,702] INFO in _internal: 10.1.39.126 - - [26/May/2025 13:25:22] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+[2025-05-26 13:25:57,897] INFO in _internal: 10.1.39.126 - - [26/May/2025 13:25:57] "GET / HTTP/1.1" 200 -
+[2025-05-26 13:25:57,949] INFO in _internal: 10.1.39.126 - - [26/May/2025 13:25:57] "[36mGET /static/assets/zg.jpg HTTP/1.1[0m" 304 -
+[2025-05-26 13:25:57,950] INFO in _internal: 10.1.39.126 - - [26/May/2025 13:25:57] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+[2025-05-26 13:25:57,952] INFO in _internal: 10.1.39.126 - - [26/May/2025 13:25:57] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+[2025-05-26 13:26:19,482] INFO in app: Recebido pedido de split: 1 arquivo(s), 2 partes.
+[2025-05-26 13:26:19,485] INFO in app: Dividindo '1.pdf' com 16 páginas em 2 partes.
+[2025-05-26 13:26:19,710] INFO in app: Arquivo '1.pdf' dividido com sucesso.
+[2025-05-26 13:26:19,710] INFO in app: Split concluído com sucesso.
+[2025-05-26 13:26:19,715] INFO in _internal: 10.1.39.126 - - [26/May/2025 13:26:19] "POST /split HTTP/1.1" 200 -
+[2025-05-26 13:27:08,147] INFO in _internal: 10.1.39.126 - - [26/May/2025 13:27:08] "GET / HTTP/1.1" 200 -
+[2025-05-26 13:27:08,207] INFO in _internal: 10.1.39.126 - - [26/May/2025 13:27:08] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+[2025-05-26 13:27:08,208] INFO in _internal: 10.1.39.126 - - [26/May/2025 13:27:08] "[36mGET /static/assets/zg.jpg HTTP/1.1[0m" 304 -
+[2025-05-26 13:27:08,227] INFO in _internal: 10.1.39.126 - - [26/May/2025 13:27:08] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+[2025-05-26 13:27:14,669] INFO in app: Recebido pedido de split: 1 arquivo(s), 3 partes.
+[2025-05-26 13:27:14,672] INFO in app: Dividindo '1.pdf' com 16 páginas em 3 partes.
+[2025-05-26 13:27:14,901] INFO in app: Arquivo '1.pdf' dividido com sucesso.
+[2025-05-26 13:27:14,901] INFO in app: Split concluído com sucesso.
+[2025-05-26 13:27:14,904] INFO in _internal: 10.1.39.126 - - [26/May/2025 13:27:14] "POST /split HTTP/1.1" 200 -
+[2025-05-26 13:28:28,460] INFO in _internal: 10.1.39.126 - - [26/May/2025 13:28:28] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+[2025-05-26 13:33:45,627] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5007
+ * Running on http://10.1.39.126:5007
+[2025-05-26 13:33:45,627] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2025-05-26 13:33:45,647] INFO in _internal:  * Restarting with stat
+[2025-05-26 13:33:50,048] WARNING in _internal:  * Debugger is active!
+[2025-05-26 13:33:50,056] INFO in _internal:  * Debugger PIN: 126-845-284
+[2025-05-26 13:34:30,465] INFO in _internal: 10.1.39.126 - - [26/May/2025 13:34:30] "GET / HTTP/1.1" 200 -
+[2025-05-26 13:34:30,714] INFO in _internal: 10.1.39.126 - - [26/May/2025 13:34:30] "GET /static/style.css HTTP/1.1" 200 -
+[2025-05-26 13:34:30,740] INFO in _internal: 10.1.39.126 - - [26/May/2025 13:34:30] "GET /static/assets/zg.jpg HTTP/1.1" 200 -
+[2025-05-26 13:34:30,754] INFO in _internal: 10.1.39.126 - - [26/May/2025 13:34:30] "GET /static/script.js HTTP/1.1" 200 -
+[2025-05-26 13:34:49,546] INFO in app: Recebido pedido de split: 1 arquivo(s), 2 partes.
+[2025-05-26 13:34:49,551] INFO in app: Dividindo '1.pdf' com 16 páginas em 2 partes.
+[2025-05-26 13:34:49,778] INFO in app: Arquivo '1.pdf' dividido com sucesso.
+[2025-05-26 13:34:49,779] INFO in app: Split concluído com sucesso.
+[2025-05-26 13:34:49,780] INFO in _internal: 10.1.39.126 - - [26/May/2025 13:34:49] "POST /split HTTP/1.1" 200 -
+[2025-05-26 13:35:27,506] INFO in _internal: 10.1.39.126 - - [26/May/2025 13:35:27] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+[2025-05-26 13:36:16,993] INFO in app: Recebido pedido de merge com 2 arquivo(s).
+[2025-05-26 13:36:17,005] INFO in app: Arquivo '1.pdf' adicionado com sucesso ao merge.
+[2025-05-26 13:36:17,017] INFO in app: Arquivo '1 - Copia.pdf' adicionado com sucesso ao merge.
+[2025-05-26 13:36:17,095] INFO in app: Merge concluído com sucesso.
+[2025-05-26 13:36:17,102] INFO in _internal: 10.1.39.126 - - [26/May/2025 13:36:17] "POST /merge HTTP/1.1" 200 -
+[2025-05-26 14:21:42,684] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5007
+ * Running on http://10.1.39.126:5007
+[2025-05-26 14:21:42,685] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2025-05-26 14:21:42,729] INFO in _internal:  * Restarting with stat
+[2025-05-26 14:21:47,956] WARNING in _internal:  * Debugger is active!
+[2025-05-26 14:21:47,967] INFO in _internal:  * Debugger PIN: 948-417-396
+[2025-05-26 14:22:02,397] INFO in _internal: 10.1.39.126 - - [26/May/2025 14:22:02] "GET / HTTP/1.1" 200 -
+[2025-05-26 14:22:02,866] INFO in _internal: 10.1.39.126 - - [26/May/2025 14:22:02] "GET /static/style.css HTTP/1.1" 200 -
+[2025-05-26 14:22:02,879] INFO in _internal: 10.1.39.126 - - [26/May/2025 14:22:02] "GET /static/assets/zg.jpg HTTP/1.1" 200 -
+[2025-05-26 14:22:02,949] INFO in _internal: 10.1.39.126 - - [26/May/2025 14:22:02] "GET /static/script.js HTTP/1.1" 200 -

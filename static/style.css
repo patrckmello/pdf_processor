@@ -387,6 +387,32 @@ main {
     }
 }
 
+/* Spinner centralizado no meio do menu */
+.spinner {
+  position: absolute; /* posiciona em relação ao #mergeMenu ou #splitMenu */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000; /* para ficar na frente */
+  width: 50px;   /* ajuste o tamanho */
+  height: 50px;
+  border: 6px solid #f3f3f3; /* base do spinner */
+  border-top: 6px solid #3498db; /* cor da borda animada */
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+/* Animação para girar */
+@keyframes spin {
+  0% { transform: translate(-50%, -50%) rotate(0deg); }
+  100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+/* Esconde o spinner quando tiver a classe hidden */
+.spinner.hidden {
+  display: none;
+}
+
 #pdf-preview-container {
   max-width: 400px;   /* ou 100% para responsivo */
   margin: 0 auto;
@@ -411,9 +437,69 @@ main {
 }
 
 .preview-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
     position: relative;
-    display: inline-block;
-    margin: 5px;
+}
+
+.file-name {
+    margin-top: 5px;
+    font-size: 14px;
+    color: #333;
+    word-break: break-word;
+    text-align: center;
+    max-width: 200px;
+}
+
+#preview-container-grid {
+  position: relative;
+}
+
+#sort-icon {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  z-index: 1000;
+  transition: transform 0.2s ease;
+}
+
+#sort-icon:hover {
+  transform: scale(1.1);
+}
+
+#sort-menu {
+  display: none;
+  position: absolute;
+  top: 44px; /* abaixo do ícone */
+  right: 10px;
+  background: white;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  z-index: 999;
+  border-radius: 6px;
+  min-width: 180px;
+}
+
+#sort-menu button {
+  background-color: #f3f4f6;
+  border: none;
+  padding: 8px 12px;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  font-size: 14px;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+#sort-menu button:hover {
+  background-color: #e5e7eb;
 }
 
 .remove-btn {

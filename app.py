@@ -62,7 +62,7 @@ def split_pdfs():
     files = request.files.getlist('files')
     parts = request.form.get('parts', type=int)
 
-    if not files or not parts or parts < 1:
+    if not files or not parts or parts < 2:
         logging.warning("Tentativa de split sem arquivos válidos ou número de partes inválido.")
         return abort(400, 'Nenhum arquivo enviado ou número de partes inválido')
 
