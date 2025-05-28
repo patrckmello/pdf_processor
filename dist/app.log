@@ -102,3 +102,28 @@
 [2025-05-26 14:22:02,866] INFO in _internal: 10.1.39.126 - - [26/May/2025 14:22:02] "GET /static/style.css HTTP/1.1" 200 -
 [2025-05-26 14:22:02,879] INFO in _internal: 10.1.39.126 - - [26/May/2025 14:22:02] "GET /static/assets/zg.jpg HTTP/1.1" 200 -
 [2025-05-26 14:22:02,949] INFO in _internal: 10.1.39.126 - - [26/May/2025 14:22:02] "GET /static/script.js HTTP/1.1" 200 -
+[2025-05-28 13:55:03,559] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5007
+ * Running on http://10.1.39.126:5007
+[2025-05-28 13:55:03,560] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2025-05-28 13:55:03,589] INFO in _internal:  * Restarting with stat
+[2025-05-28 13:55:08,022] WARNING in _internal:  * Debugger is active!
+[2025-05-28 13:55:08,030] INFO in _internal:  * Debugger PIN: 612-804-494
+[2025-05-28 13:55:08,056] INFO in _internal: 10.1.39.126 - - [28/May/2025 13:55:08] "GET / HTTP/1.1" 200 -
+[2025-05-28 13:55:08,203] INFO in _internal: 10.1.39.126 - - [28/May/2025 13:55:08] "GET /static/style.css HTTP/1.1" 200 -
+[2025-05-28 13:55:08,242] INFO in _internal: 10.1.39.126 - - [28/May/2025 13:55:08] "GET /static/script.js HTTP/1.1" 200 -
+[2025-05-28 13:55:08,267] INFO in _internal: 10.1.39.126 - - [28/May/2025 13:55:08] "GET /static/assets/zg.jpg HTTP/1.1" 200 -
+[2025-05-28 13:55:08,277] INFO in _internal: 10.1.39.126 - - [28/May/2025 13:55:08] "GET /static/assets/sorting.png HTTP/1.1" 200 -
+[2025-05-28 13:55:33,927] INFO in app: Recebido pedido de merge com 4 arquivo(s).
+[2025-05-28 13:55:33,929] INFO in app: Arquivo 'd.pdf' adicionado com sucesso ao merge.
+[2025-05-28 13:55:33,942] INFO in app: Arquivo 'c.pdf' adicionado com sucesso ao merge.
+[2025-05-28 13:55:33,943] INFO in app: Arquivo '2.pdf' adicionado com sucesso ao merge.
+[2025-05-28 13:55:33,944] INFO in app: Arquivo '1.pdf' adicionado com sucesso ao merge.
+[2025-05-28 13:55:33,987] INFO in app: Merge concluído com sucesso.
+[2025-05-28 13:55:33,991] INFO in _internal: 10.1.39.126 - - [28/May/2025 13:55:33] "POST /merge HTTP/1.1" 200 -
+[2025-05-28 13:55:37,066] INFO in _internal: 10.1.39.126 - - [28/May/2025 13:55:37] "GET / HTTP/1.1" 200 -
+[2025-05-28 13:55:37,141] INFO in _internal: 10.1.39.126 - - [28/May/2025 13:55:37] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+[2025-05-28 13:55:37,147] INFO in _internal: 10.1.39.126 - - [28/May/2025 13:55:37] "[36mGET /static/assets/zg.jpg HTTP/1.1[0m" 304 -
+[2025-05-28 13:55:37,171] INFO in _internal: 10.1.39.126 - - [28/May/2025 13:55:37] "[36mGET /static/assets/sorting.png HTTP/1.1[0m" 304 -
+[2025-05-28 13:55:37,183] INFO in _internal: 10.1.39.126 - - [28/May/2025 13:55:37] "[36mGET /static/script.js HTTP/1.1[0m" 304 -

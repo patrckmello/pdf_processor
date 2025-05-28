@@ -58,9 +58,9 @@ main {
 
 .function-btn {
     font-family: 'Poppins', sans-serif;
-    background: #198754;
+    background: #198754 !important;
     color: white;
-    width: 100px;
+    width: 180px;
     height: 50px;
     border: none;
     margin-top: 10px;
@@ -80,21 +80,6 @@ main {
     display: block;
     text-align: center;
     margin-bottom: 0;
-}
-
-#progress-container {
-    width: 100%;
-    background-color: #f3f3f3;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    margin-top: 20px;
-}
-
-#progress-bar {
-    height: 10px;
-    width: 0;
-    background-color: #4caf50;
-    border-radius: 5px;
 }
 
 #status-message {
@@ -509,7 +494,7 @@ main {
 
 #sort-icon {
   position: absolute;
-  top: 20px;
+  top: 25px;
   right: 20px;
   width: 24px;
   height: 24px;
@@ -525,8 +510,8 @@ main {
 #sort-menu {
   display: none;
   position: absolute;
-  top: 44px; /* abaixo do ícone */
-  right: 10px;
+  top: 54px; /* abaixo do ícone */
+  left: 93%;
   background: white;
   border: 1px solid #ccc;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);

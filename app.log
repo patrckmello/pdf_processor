@@ -756,3 +756,150 @@
 [2025-05-27 17:46:44,515] INFO in _internal: 10.1.39.126 - - [27/May/2025 17:46:44] "POST /split HTTP/1.1" 200 -
 [2025-05-27 17:47:37,070] INFO in _internal:  * Detected change in 'C:\\Scan\\code\\ZG\\unir_dividir_pdf\\app.py', reloading
 [2025-05-27 17:47:37,198] INFO in _internal:  * Restarting with stat
+[2025-05-27 17:47:38,306] WARNING in _internal:  * Debugger is active!
+[2025-05-27 17:47:38,317] INFO in _internal:  * Debugger PIN: 382-593-069
+[2025-05-27 17:49:09,992] INFO in _internal: 10.1.39.126 - - [27/May/2025 17:49:09] "GET / HTTP/1.1" 200 -
+[2025-05-27 17:49:10,622] INFO in _internal: 10.1.39.126 - - [27/May/2025 17:49:10] "GET /static/style.css HTTP/1.1" 200 -
+[2025-05-27 17:49:10,699] INFO in _internal: 10.1.39.126 - - [27/May/2025 17:49:10] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+[2025-05-27 17:49:10,709] INFO in _internal: 10.1.39.126 - - [27/May/2025 17:49:10] "[36mGET /static/assets/zg.jpg HTTP/1.1[0m" 304 -
+[2025-05-27 17:49:10,838] INFO in _internal: 10.1.39.126 - - [27/May/2025 17:49:10] "[36mGET /static/assets/sorting.png HTTP/1.1[0m" 304 -
+[2025-05-27 17:50:39,371] INFO in _internal: 10.1.39.126 - - [27/May/2025 17:50:39] "GET / HTTP/1.1" 200 -
+[2025-05-27 17:50:39,422] INFO in _internal: 10.1.39.126 - - [27/May/2025 17:50:39] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+[2025-05-27 17:50:39,450] INFO in _internal: 10.1.39.126 - - [27/May/2025 17:50:39] "[36mGET /static/assets/zg.jpg HTTP/1.1[0m" 304 -
+[2025-05-27 17:50:39,451] INFO in _internal: 10.1.39.126 - - [27/May/2025 17:50:39] "[36mGET /static/assets/sorting.png HTTP/1.1[0m" 304 -
+[2025-05-27 17:50:39,485] INFO in _internal: 10.1.39.126 - - [27/May/2025 17:50:39] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+[2025-05-27 17:51:45,378] INFO in _internal: 10.1.39.126 - - [27/May/2025 17:51:45] "GET / HTTP/1.1" 200 -
+[2025-05-27 17:51:45,478] INFO in _internal: 10.1.39.126 - - [27/May/2025 17:51:45] "[36mGET /static/assets/zg.jpg HTTP/1.1[0m" 304 -
+[2025-05-27 17:51:45,494] INFO in _internal: 10.1.39.126 - - [27/May/2025 17:51:45] "GET /static/style.css HTTP/1.1" 200 -
+[2025-05-27 17:51:45,517] INFO in _internal: 10.1.39.126 - - [27/May/2025 17:51:45] "[36mGET /static/assets/sorting.png HTTP/1.1[0m" 304 -
+[2025-05-27 17:51:45,523] INFO in _internal: 10.1.39.126 - - [27/May/2025 17:51:45] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+[2025-05-27 17:52:29,494] INFO in _internal: 10.1.39.126 - - [27/May/2025 17:52:29] "GET / HTTP/1.1" 200 -
+[2025-05-27 17:52:29,561] INFO in _internal: 10.1.39.126 - - [27/May/2025 17:52:29] "[36mGET /static/assets/zg.jpg HTTP/1.1[0m" 304 -
+[2025-05-27 17:52:29,576] INFO in _internal: 10.1.39.126 - - [27/May/2025 17:52:29] "GET /static/style.css HTTP/1.1" 200 -
+[2025-05-27 17:52:29,592] INFO in _internal: 10.1.39.126 - - [27/May/2025 17:52:29] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+[2025-05-27 17:52:29,593] INFO in _internal: 10.1.39.126 - - [27/May/2025 17:52:29] "[36mGET /static/assets/sorting.png HTTP/1.1[0m" 304 -
+[2025-05-27 17:52:47,006] INFO in _internal: 10.1.39.126 - - [27/May/2025 17:52:47] "GET / HTTP/1.1" 200 -
+[2025-05-27 17:52:47,128] INFO in _internal: 10.1.39.126 - - [27/May/2025 17:52:47] "GET /static/style.css HTTP/1.1" 200 -
+[2025-05-27 17:52:47,145] INFO in _internal: 10.1.39.126 - - [27/May/2025 17:52:47] "[36mGET /static/assets/zg.jpg HTTP/1.1[0m" 304 -
+[2025-05-27 17:52:47,161] INFO in _internal: 10.1.39.126 - - [27/May/2025 17:52:47] "[36mGET /static/assets/sorting.png HTTP/1.1[0m" 304 -
+[2025-05-27 17:52:47,189] INFO in _internal: 10.1.39.126 - - [27/May/2025 17:52:47] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+[2025-05-27 17:52:58,616] INFO in _internal: 10.1.39.126 - - [27/May/2025 17:52:58] "GET / HTTP/1.1" 200 -
+[2025-05-27 17:52:58,711] INFO in _internal: 10.1.39.126 - - [27/May/2025 17:52:58] "GET /static/style.css HTTP/1.1" 200 -
+[2025-05-27 17:52:58,716] INFO in _internal: 10.1.39.126 - - [27/May/2025 17:52:58] "[36mGET /static/assets/zg.jpg HTTP/1.1[0m" 304 -
+[2025-05-27 17:52:58,725] INFO in _internal: 10.1.39.126 - - [27/May/2025 17:52:58] "[36mGET /static/assets/sorting.png HTTP/1.1[0m" 304 -
+[2025-05-27 17:52:58,762] INFO in _internal: 10.1.39.126 - - [27/May/2025 17:52:58] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+[2025-05-28 13:57:10,061] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5007
+ * Running on http://10.1.39.126:5007
+[2025-05-28 13:57:10,070] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2025-05-28 13:57:10,084] INFO in _internal:  * Restarting with stat
+[2025-05-28 13:57:12,167] WARNING in _internal:  * Debugger is active!
+[2025-05-28 13:57:12,267] INFO in _internal:  * Debugger PIN: 382-593-069
+[2025-05-28 13:57:18,691] INFO in _internal: 10.1.39.126 - - [28/May/2025 13:57:18] "GET / HTTP/1.1" 200 -
+[2025-05-28 13:57:19,118] INFO in _internal: 10.1.39.126 - - [28/May/2025 13:57:19] "GET /static/style.css HTTP/1.1" 200 -
+[2025-05-28 13:57:19,178] INFO in _internal: 10.1.39.126 - - [28/May/2025 13:57:19] "GET /static/script.js HTTP/1.1" 200 -
+[2025-05-28 13:57:19,322] INFO in _internal: 10.1.39.126 - - [28/May/2025 13:57:19] "GET /static/assets/zg.jpg HTTP/1.1" 200 -
+[2025-05-28 13:57:19,412] INFO in _internal: 10.1.39.126 - - [28/May/2025 13:57:19] "GET /static/assets/sorting.png HTTP/1.1" 200 -
+[2025-05-28 13:57:42,089] INFO in app: Modo de divisão selecionado: size
+[2025-05-28 13:57:42,148] INFO in app: Dividindo '1.pdf' em partes de até 2.0 MB.
+[2025-05-28 13:57:42,214] INFO in _internal: 10.1.39.126 - - [28/May/2025 13:57:42] "POST /split HTTP/1.1" 200 -
+[2025-05-28 13:59:16,769] INFO in app: Modo de divisão selecionado: parts
+[2025-05-28 13:59:16,772] INFO in app: Dividindo 'c.pdf' em 2 parte(s).
+[2025-05-28 13:59:17,066] INFO in _internal: 10.1.39.126 - - [28/May/2025 13:59:17] "POST /split HTTP/1.1" 200 -
+[2025-05-28 13:59:40,143] INFO in _internal: 10.1.39.126 - - [28/May/2025 13:59:40] "GET / HTTP/1.1" 200 -
+[2025-05-28 13:59:40,265] INFO in _internal: 10.1.39.126 - - [28/May/2025 13:59:40] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+[2025-05-28 13:59:40,360] INFO in _internal: 10.1.39.126 - - [28/May/2025 13:59:40] "[36mGET /static/assets/zg.jpg HTTP/1.1[0m" 304 -
+[2025-05-28 13:59:40,407] INFO in _internal: 10.1.39.126 - - [28/May/2025 13:59:40] "[36mGET /static/assets/sorting.png HTTP/1.1[0m" 304 -
+[2025-05-28 13:59:40,426] INFO in _internal: 10.1.39.126 - - [28/May/2025 13:59:40] "GET /static/script.js HTTP/1.1" 200 -
+[2025-05-28 14:00:44,896] INFO in _internal: 10.1.39.126 - - [28/May/2025 14:00:44] "GET / HTTP/1.1" 200 -
+[2025-05-28 14:00:44,966] INFO in _internal: 10.1.39.126 - - [28/May/2025 14:00:44] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+[2025-05-28 14:00:44,999] INFO in _internal: 10.1.39.126 - - [28/May/2025 14:00:44] "[36mGET /static/assets/zg.jpg HTTP/1.1[0m" 304 -
+[2025-05-28 14:00:45,095] INFO in _internal: 10.1.39.126 - - [28/May/2025 14:00:45] "[36mGET /static/assets/sorting.png HTTP/1.1[0m" 304 -
+[2025-05-28 14:00:45,116] INFO in _internal: 10.1.39.126 - - [28/May/2025 14:00:45] "GET /static/script.js HTTP/1.1" 200 -
+[2025-05-28 14:01:12,513] INFO in app: Modo de divisão selecionado: parts
+[2025-05-28 14:01:12,517] INFO in app: Dividindo 'c.pdf' em 2 parte(s).
+[2025-05-28 14:01:12,809] INFO in _internal: 10.1.39.126 - - [28/May/2025 14:01:12] "POST /split HTTP/1.1" 200 -
+[2025-05-28 14:01:12,883] INFO in _internal: 10.1.39.126 - - [28/May/2025 14:01:12] "GET / HTTP/1.1" 200 -
+[2025-05-28 14:01:12,996] INFO in _internal: 10.1.39.126 - - [28/May/2025 14:01:12] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+[2025-05-28 14:01:13,019] INFO in _internal: 10.1.39.126 - - [28/May/2025 14:01:13] "[36mGET /static/assets/zg.jpg HTTP/1.1[0m" 304 -
+[2025-05-28 14:01:13,059] INFO in _internal: 10.1.39.126 - - [28/May/2025 14:01:13] "[36mGET /static/assets/sorting.png HTTP/1.1[0m" 304 -
+[2025-05-28 14:01:13,067] INFO in _internal: 10.1.39.126 - - [28/May/2025 14:01:13] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+[2025-05-28 14:01:30,196] INFO in _internal: 10.1.39.126 - - [28/May/2025 14:01:30] "GET / HTTP/1.1" 200 -
+[2025-05-28 14:01:30,276] INFO in _internal: 10.1.39.126 - - [28/May/2025 14:01:30] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+[2025-05-28 14:01:30,315] INFO in _internal: 10.1.39.126 - - [28/May/2025 14:01:30] "[36mGET /static/assets/zg.jpg HTTP/1.1[0m" 304 -
+[2025-05-28 14:01:30,349] INFO in _internal: 10.1.39.126 - - [28/May/2025 14:01:30] "[36mGET /static/assets/sorting.png HTTP/1.1[0m" 304 -
+[2025-05-28 14:01:30,412] INFO in _internal: 10.1.39.126 - - [28/May/2025 14:01:30] "GET /static/script.js HTTP/1.1" 200 -
+[2025-05-28 14:01:37,522] INFO in app: Modo de divisão selecionado: parts
+[2025-05-28 14:01:37,525] INFO in app: Dividindo 'c.pdf' em 2 parte(s).
+[2025-05-28 14:01:37,809] INFO in _internal: 10.1.39.126 - - [28/May/2025 14:01:37] "POST /split HTTP/1.1" 200 -
+[2025-05-28 14:01:37,845] INFO in _internal: 10.1.39.126 - - [28/May/2025 14:01:37] "GET / HTTP/1.1" 200 -
+[2025-05-28 14:01:37,941] INFO in _internal: 10.1.39.126 - - [28/May/2025 14:01:37] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+[2025-05-28 14:01:37,960] INFO in _internal: 10.1.39.126 - - [28/May/2025 14:01:37] "[36mGET /static/assets/zg.jpg HTTP/1.1[0m" 304 -
+[2025-05-28 14:01:37,992] INFO in _internal: 10.1.39.126 - - [28/May/2025 14:01:37] "[36mGET /static/assets/sorting.png HTTP/1.1[0m" 304 -
+[2025-05-28 14:01:37,995] INFO in _internal: 10.1.39.126 - - [28/May/2025 14:01:37] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+[2025-05-28 14:03:55,260] INFO in _internal: 10.1.39.126 - - [28/May/2025 14:03:55] "GET / HTTP/1.1" 200 -
+[2025-05-28 14:03:55,322] INFO in _internal: 10.1.39.126 - - [28/May/2025 14:03:55] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+[2025-05-28 14:03:55,424] INFO in _internal: 10.1.39.126 - - [28/May/2025 14:03:55] "[36mGET /static/assets/zg.jpg HTTP/1.1[0m" 304 -
+[2025-05-28 14:03:55,457] INFO in _internal: 10.1.39.126 - - [28/May/2025 14:03:55] "[36mGET /static/assets/sorting.png HTTP/1.1[0m" 304 -
+[2025-05-28 14:03:55,477] INFO in _internal: 10.1.39.126 - - [28/May/2025 14:03:55] "GET /static/script.js HTTP/1.1" 200 -
+[2025-05-28 14:04:01,767] INFO in app: Modo de divisão selecionado: parts
+[2025-05-28 14:04:01,771] INFO in app: Dividindo 'c.pdf' em 2 parte(s).
+[2025-05-28 14:04:02,075] INFO in _internal: 10.1.39.126 - - [28/May/2025 14:04:02] "POST /split HTTP/1.1" 200 -
+[2025-05-28 14:04:05,130] INFO in _internal: 10.1.39.126 - - [28/May/2025 14:04:05] "GET / HTTP/1.1" 200 -
+[2025-05-28 14:04:05,204] INFO in _internal: 10.1.39.126 - - [28/May/2025 14:04:05] "[36mGET /static/assets/zg.jpg HTTP/1.1[0m" 304 -
+[2025-05-28 14:04:05,212] INFO in _internal: 10.1.39.126 - - [28/May/2025 14:04:05] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+[2025-05-28 14:04:05,215] INFO in _internal: 10.1.39.126 - - [28/May/2025 14:04:05] "[36mGET /static/assets/sorting.png HTTP/1.1[0m" 304 -
+[2025-05-28 14:04:05,222] INFO in _internal: 10.1.39.126 - - [28/May/2025 14:04:05] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+[2025-05-28 14:06:14,362] INFO in _internal: 10.1.39.126 - - [28/May/2025 14:06:14] "GET / HTTP/1.1" 200 -
+[2025-05-28 14:06:14,419] INFO in _internal: 10.1.39.126 - - [28/May/2025 14:06:14] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+[2025-05-28 14:06:14,434] INFO in _internal: 10.1.39.126 - - [28/May/2025 14:06:14] "[36mGET /static/assets/zg.jpg HTTP/1.1[0m" 304 -
+[2025-05-28 14:06:14,453] INFO in _internal: 10.1.39.126 - - [28/May/2025 14:06:14] "[36mGET /static/assets/sorting.png HTTP/1.1[0m" 304 -
+[2025-05-28 14:06:14,479] INFO in _internal: 10.1.39.126 - - [28/May/2025 14:06:14] "GET /static/script.js HTTP/1.1" 200 -
+[2025-05-28 14:06:39,345] INFO in _internal: 10.1.39.126 - - [28/May/2025 14:06:39] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+[2025-05-28 14:06:58,594] INFO in _internal: 10.1.39.126 - - [28/May/2025 14:06:58] "GET / HTTP/1.1" 200 -
+[2025-05-28 14:06:58,759] INFO in _internal: 10.1.39.126 - - [28/May/2025 14:06:58] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+[2025-05-28 14:06:58,782] INFO in _internal: 10.1.39.126 - - [28/May/2025 14:06:58] "[36mGET /static/assets/zg.jpg HTTP/1.1[0m" 304 -
+[2025-05-28 14:06:58,825] INFO in _internal: 10.1.39.126 - - [28/May/2025 14:06:58] "[36mGET /static/assets/sorting.png HTTP/1.1[0m" 304 -
+[2025-05-28 14:06:58,869] INFO in _internal: 10.1.39.126 - - [28/May/2025 14:06:58] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+[2025-05-28 14:07:19,735] INFO in app: Recebido pedido de merge com 4 arquivo(s).
+[2025-05-28 14:07:19,738] INFO in app: Arquivo 'd.pdf' adicionado com sucesso ao merge.
+[2025-05-28 14:07:19,773] INFO in app: Arquivo 'c.pdf' adicionado com sucesso ao merge.
+[2025-05-28 14:07:19,778] INFO in app: Arquivo '2.pdf' adicionado com sucesso ao merge.
+[2025-05-28 14:07:19,780] INFO in app: Arquivo '1.pdf' adicionado com sucesso ao merge.
+[2025-05-28 14:07:19,855] INFO in app: Merge concluído com sucesso.
+[2025-05-28 14:07:19,859] INFO in _internal: 10.1.39.126 - - [28/May/2025 14:07:19] "POST /merge HTTP/1.1" 200 -
+[2025-05-28 14:07:22,913] INFO in _internal: 10.1.39.126 - - [28/May/2025 14:07:22] "GET / HTTP/1.1" 200 -
+[2025-05-28 14:07:23,068] INFO in _internal: 10.1.39.126 - - [28/May/2025 14:07:23] "[36mGET /static/assets/zg.jpg HTTP/1.1[0m" 304 -
+[2025-05-28 14:07:23,084] INFO in _internal: 10.1.39.126 - - [28/May/2025 14:07:23] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+[2025-05-28 14:07:23,116] INFO in _internal: 10.1.39.126 - - [28/May/2025 14:07:23] "[36mGET /static/assets/sorting.png HTTP/1.1[0m" 304 -
+[2025-05-28 14:07:23,136] INFO in _internal: 10.1.39.126 - - [28/May/2025 14:07:23] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+[2025-05-28 14:08:15,508] INFO in _internal: 10.1.39.126 - - [28/May/2025 14:08:15] "GET / HTTP/1.1" 200 -
+[2025-05-28 14:08:15,595] INFO in _internal: 10.1.39.126 - - [28/May/2025 14:08:15] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+[2025-05-28 14:08:15,612] INFO in _internal: 10.1.39.126 - - [28/May/2025 14:08:15] "[36mGET /static/assets/zg.jpg HTTP/1.1[0m" 304 -
+[2025-05-28 14:08:15,612] INFO in _internal: 10.1.39.126 - - [28/May/2025 14:08:15] "[36mGET /static/assets/sorting.png HTTP/1.1[0m" 304 -
+[2025-05-28 14:08:15,660] INFO in _internal: 10.1.39.126 - - [28/May/2025 14:08:15] "GET /static/script.js HTTP/1.1" 200 -
+[2025-05-28 14:08:28,961] INFO in app: Recebido pedido de merge com 4 arquivo(s).
+[2025-05-28 14:08:28,964] INFO in app: Arquivo '1.pdf' adicionado com sucesso ao merge.
+[2025-05-28 14:08:28,972] INFO in app: Arquivo '2.pdf' adicionado com sucesso ao merge.
+[2025-05-28 14:08:28,974] INFO in app: Arquivo 'd.pdf' adicionado com sucesso ao merge.
+[2025-05-28 14:08:28,991] INFO in app: Arquivo 'c.pdf' adicionado com sucesso ao merge.
+[2025-05-28 14:08:29,055] INFO in app: Merge concluído com sucesso.
+[2025-05-28 14:08:29,058] INFO in _internal: 10.1.39.126 - - [28/May/2025 14:08:29] "POST /merge HTTP/1.1" 200 -
+[2025-05-28 14:08:32,111] INFO in _internal: 10.1.39.126 - - [28/May/2025 14:08:32] "GET / HTTP/1.1" 200 -
+[2025-05-28 14:08:32,206] INFO in _internal: 10.1.39.126 - - [28/May/2025 14:08:32] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+[2025-05-28 14:08:32,234] INFO in _internal: 10.1.39.126 - - [28/May/2025 14:08:32] "[36mGET /static/assets/zg.jpg HTTP/1.1[0m" 304 -
+[2025-05-28 14:08:32,244] INFO in _internal: 10.1.39.126 - - [28/May/2025 14:08:32] "[36mGET /static/assets/sorting.png HTTP/1.1[0m" 304 -
+[2025-05-28 14:08:32,283] INFO in _internal: 10.1.39.126 - - [28/May/2025 14:08:32] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+[2025-05-28 14:21:01,215] INFO in app: Recebido pedido de merge com 4 arquivo(s).
+[2025-05-28 14:21:01,217] INFO in app: Arquivo 'd.pdf' adicionado com sucesso ao merge.
+[2025-05-28 14:21:01,234] INFO in app: Arquivo 'c.pdf' adicionado com sucesso ao merge.
+[2025-05-28 14:21:01,244] INFO in app: Arquivo '2.pdf' adicionado com sucesso ao merge.
+[2025-05-28 14:21:01,245] INFO in app: Arquivo '1.pdf' adicionado com sucesso ao merge.
+[2025-05-28 14:21:01,312] INFO in app: Merge concluído com sucesso.
+[2025-05-28 14:21:01,313] INFO in _internal: 10.1.39.126 - - [28/May/2025 14:21:01] "POST /merge HTTP/1.1" 200 -
+[2025-05-28 14:21:04,441] INFO in _internal: 10.1.39.126 - - [28/May/2025 14:21:04] "GET / HTTP/1.1" 200 -
+[2025-05-28 14:21:04,672] INFO in _internal: 10.1.39.126 - - [28/May/2025 14:21:04] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+[2025-05-28 14:21:04,756] INFO in _internal: 10.1.39.126 - - [28/May/2025 14:21:04] "[36mGET /static/assets/zg.jpg HTTP/1.1[0m" 304 -
+[2025-05-28 14:21:04,776] INFO in _internal: 10.1.39.126 - - [28/May/2025 14:21:04] "[36mGET /static/assets/sorting.png HTTP/1.1[0m" 304 -
+[2025-05-28 14:21:04,817] INFO in _internal: 10.1.39.126 - - [28/May/2025 14:21:04] "[36mGET /static/script.js HTTP/1.1[0m" 304 -

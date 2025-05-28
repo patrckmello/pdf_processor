@@ -388,19 +388,26 @@ startMergeBtn.addEventListener('click', () => {
     const wrappers = previewContainer.querySelectorAll('.preview-wrapper');
     const orderedFiles = [];
 
-    wrappers.forEach(wrapper => {
-        const filename = wrapper.getAttribute('data-filename');
-        const file = selectedFiles.find(f => f.name === filename);
-        if (file) orderedFiles.push(file);
-    });
+    // Tenta usar os elementos de visualização (se existirem e estiverem válidos)
+    if (wrappers.length && [...wrappers].every(w => w.hasAttribute('data-filename'))) {
+        wrappers.forEach(wrapper => {
+            const filename = wrapper.getAttribute('data-filename');
+            const file = selectedFiles.find(f => f.name === filename);
+            if (file) orderedFiles.push(file);
+        });
+        console.log('Ordem visual aplicada:', orderedFiles.map(f => f.name));
+    } else {
+        // Fallback: usa a ordem original dos arquivos selecionados
+        orderedFiles.push(...selectedFiles);
+        console.log('Fallback para ordem original:', orderedFiles.map(f => f.name));
+    }
 
-
-    console.log('Arquivos selecionados para unir:', orderedFiles);
-
+    // Validação real
     if (orderedFiles.length < 2) {
         hideSpinner();
         errorMessage2.textContent = '⚠️ Selecione pelo menos 2 arquivos para realizar a união.';
         errorMessage2.style.display = 'block';
+        console.warn('Menos de 2 arquivos válidos foram processados.');
         return;
     }
 
@@ -438,6 +445,7 @@ startMergeBtn.addEventListener('click', () => {
 
     closeMergeMenu();
 });
+
 
 startSplitBtn.addEventListener('click', async () => {
     hideAllErrors();
@@ -535,7 +543,12 @@ startSplitBtn.addEventListener('click', async () => {
         document.body.appendChild(a);
         a.click();
         a.remove();
-    } catch (error) {
+        window.URL.revokeObjectURL(url);
+            setTimeout(() => {
+                resetApp();
+            }, 3000);
+        }
+        catch (error) {
         console.error('Erro ao dividir PDF:', error);
         errorMessage2.textContent = '⚠️ Ocorreu um erro ao dividir o PDF.';
         errorMessage2.style.display = 'block';
@@ -579,4 +592,5 @@ modeButtons.forEach(button => {
             partsOption.style.display = 'none';
         }
     });
+    closeSplitMenu();
 });

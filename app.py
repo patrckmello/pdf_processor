@@ -66,6 +66,8 @@ def split_pdfs():
         logging.warning("Tentativa de split sem arquivos válidos ou modo não especificado.")
         return abort(400, 'Arquivos ou modo ausente.')
 
+    logging.info(f"Modo de divisão selecionado: {mode}")
+
     zip_buffer = io.BytesIO()
     with zipfile.ZipFile(zip_buffer, 'w', zipfile.ZIP_DEFLATED) as zipf:
         for file_storage in files:
@@ -81,7 +83,7 @@ def split_pdfs():
                     if not parts or parts < 2:
                         return abort(400, 'Número de partes inválido.')
 
-                    logging.info(f"Dividindo '{filename}' em {parts} partes.")
+                    logging.info(f"Dividindo '{filename}' em {parts} parte(s).")
 
                     pages_per_part = math.ceil(total_pages / parts)
 
@@ -139,7 +141,6 @@ def split_pdfs():
                         new_pdf.save(final_buffer)
                         final_buffer.seek(0)
                         zipf.writestr(f"{base_name}_parte_{part_number}.pdf", final_buffer.read())
-
 
             except Exception as e:
                 logging.error(f"Erro ao dividir o arquivo '{filename}': {e}")
