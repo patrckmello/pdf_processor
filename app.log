@@ -903,3 +903,66 @@
 [2025-05-28 14:21:04,756] INFO in _internal: 10.1.39.126 - - [28/May/2025 14:21:04] "[36mGET /static/assets/zg.jpg HTTP/1.1[0m" 304 -
 [2025-05-28 14:21:04,776] INFO in _internal: 10.1.39.126 - - [28/May/2025 14:21:04] "[36mGET /static/assets/sorting.png HTTP/1.1[0m" 304 -
 [2025-05-28 14:21:04,817] INFO in _internal: 10.1.39.126 - - [28/May/2025 14:21:04] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+[2025-05-28 16:48:51,890] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5007
+ * Running on http://10.1.39.126:5007
+[2025-05-28 16:48:51,892] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2025-05-28 16:48:51,895] INFO in _internal:  * Restarting with stat
+[2025-05-28 16:48:52,604] WARNING in _internal:  * Debugger is active!
+[2025-05-28 16:48:52,612] INFO in _internal:  * Debugger PIN: 382-593-069
+[2025-05-28 16:48:57,255] INFO in _internal: 10.1.39.126 - - [28/May/2025 16:48:57] "GET / HTTP/1.1" 200 -
+[2025-05-28 16:48:57,662] INFO in _internal: 10.1.39.126 - - [28/May/2025 16:48:57] "GET /static/style.css HTTP/1.1" 200 -
+[2025-05-28 16:48:57,756] INFO in _internal: 10.1.39.126 - - [28/May/2025 16:48:57] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+[2025-05-28 16:48:57,898] INFO in _internal: 10.1.39.126 - - [28/May/2025 16:48:57] "[36mGET /static/assets/sorting.png HTTP/1.1[0m" 304 -
+[2025-05-28 16:48:57,966] INFO in _internal: 10.1.39.126 - - [28/May/2025 16:48:57] "[36mGET /static/assets/zg.jpg HTTP/1.1[0m" 304 -
+[2025-05-28 16:49:12,766] INFO in _internal: 10.1.39.126 - - [28/May/2025 16:49:12] "GET / HTTP/1.1" 200 -
+[2025-05-28 16:49:12,858] INFO in _internal: 10.1.39.126 - - [28/May/2025 16:49:12] "GET /static/style.css HTTP/1.1" 200 -
+[2025-05-28 16:49:12,881] INFO in _internal: 10.1.39.126 - - [28/May/2025 16:49:12] "[36mGET /static/assets/zg.jpg HTTP/1.1[0m" 304 -
+[2025-05-28 16:49:12,948] INFO in _internal: 10.1.39.126 - - [28/May/2025 16:49:12] "[36mGET /static/assets/sorting.png HTTP/1.1[0m" 304 -
+[2025-05-28 16:49:13,012] INFO in _internal: 10.1.39.126 - - [28/May/2025 16:49:13] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+[2025-05-28 16:49:22,583] INFO in _internal: 10.1.39.126 - - [28/May/2025 16:49:22] "GET / HTTP/1.1" 200 -
+[2025-05-28 16:49:22,642] INFO in _internal: 10.1.39.126 - - [28/May/2025 16:49:22] "GET /static/style.css HTTP/1.1" 200 -
+[2025-05-28 16:49:22,654] INFO in _internal: 10.1.39.126 - - [28/May/2025 16:49:22] "[36mGET /static/assets/zg.jpg HTTP/1.1[0m" 304 -
+[2025-05-28 16:49:22,698] INFO in _internal: 10.1.39.126 - - [28/May/2025 16:49:22] "[36mGET /static/assets/sorting.png HTTP/1.1[0m" 304 -
+[2025-05-28 16:49:22,723] INFO in _internal: 10.1.39.126 - - [28/May/2025 16:49:22] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+[2025-05-28 16:49:36,584] INFO in _internal: 10.1.39.126 - - [28/May/2025 16:49:36] "GET / HTTP/1.1" 200 -
+[2025-05-28 16:49:36,868] INFO in _internal: 10.1.39.126 - - [28/May/2025 16:49:36] "GET /static/style.css HTTP/1.1" 200 -
+[2025-05-28 16:49:36,880] INFO in _internal: 10.1.39.126 - - [28/May/2025 16:49:36] "[36mGET /static/assets/zg.jpg HTTP/1.1[0m" 304 -
+[2025-05-28 16:49:36,918] INFO in _internal: 10.1.39.126 - - [28/May/2025 16:49:36] "[36mGET /static/assets/sorting.png HTTP/1.1[0m" 304 -
+[2025-05-28 16:49:37,016] INFO in _internal: 10.1.39.126 - - [28/May/2025 16:49:37] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+[2025-05-28 16:49:47,672] INFO in _internal: 10.1.39.126 - - [28/May/2025 16:49:47] "GET / HTTP/1.1" 200 -
+[2025-05-28 16:49:47,755] INFO in _internal: 10.1.39.126 - - [28/May/2025 16:49:47] "GET /static/style.css HTTP/1.1" 200 -
+[2025-05-28 16:49:47,766] INFO in _internal: 10.1.39.126 - - [28/May/2025 16:49:47] "[36mGET /static/assets/zg.jpg HTTP/1.1[0m" 304 -
+[2025-05-28 16:49:47,788] INFO in _internal: 10.1.39.126 - - [28/May/2025 16:49:47] "[36mGET /static/assets/sorting.png HTTP/1.1[0m" 304 -
+[2025-05-28 16:49:47,856] INFO in _internal: 10.1.39.126 - - [28/May/2025 16:49:47] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+[2025-05-28 16:49:57,860] INFO in _internal: 10.1.39.126 - - [28/May/2025 16:49:57] "GET / HTTP/1.1" 200 -
+[2025-05-28 16:49:58,063] INFO in _internal: 10.1.39.126 - - [28/May/2025 16:49:58] "GET /static/style.css HTTP/1.1" 200 -
+[2025-05-28 16:49:58,074] INFO in _internal: 10.1.39.126 - - [28/May/2025 16:49:58] "[36mGET /static/assets/zg.jpg HTTP/1.1[0m" 304 -
+[2025-05-28 16:49:58,111] INFO in _internal: 10.1.39.126 - - [28/May/2025 16:49:58] "[36mGET /static/assets/sorting.png HTTP/1.1[0m" 304 -
+[2025-05-28 16:49:58,143] INFO in _internal: 10.1.39.126 - - [28/May/2025 16:49:58] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+[2025-05-28 16:50:07,667] INFO in _internal: 10.1.39.126 - - [28/May/2025 16:50:07] "GET / HTTP/1.1" 200 -
+[2025-05-28 16:50:07,866] INFO in _internal: 10.1.39.126 - - [28/May/2025 16:50:07] "GET /static/style.css HTTP/1.1" 200 -
+[2025-05-28 16:50:07,900] INFO in _internal: 10.1.39.126 - - [28/May/2025 16:50:07] "[36mGET /static/assets/zg.jpg HTTP/1.1[0m" 304 -
+[2025-05-28 16:50:07,933] INFO in _internal: 10.1.39.126 - - [28/May/2025 16:50:07] "[36mGET /static/assets/sorting.png HTTP/1.1[0m" 304 -
+[2025-05-28 16:50:07,963] INFO in _internal: 10.1.39.126 - - [28/May/2025 16:50:07] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+[2025-05-28 16:50:24,239] INFO in _internal: 10.1.39.126 - - [28/May/2025 16:50:24] "GET / HTTP/1.1" 200 -
+[2025-05-28 16:50:24,297] INFO in _internal: 10.1.39.126 - - [28/May/2025 16:50:24] "GET /static/style.css HTTP/1.1" 200 -
+[2025-05-28 16:50:24,317] INFO in _internal: 10.1.39.126 - - [28/May/2025 16:50:24] "[36mGET /static/assets/zg.jpg HTTP/1.1[0m" 304 -
+[2025-05-28 16:50:24,372] INFO in _internal: 10.1.39.126 - - [28/May/2025 16:50:24] "[36mGET /static/assets/sorting.png HTTP/1.1[0m" 304 -
+[2025-05-28 16:50:24,388] INFO in _internal: 10.1.39.126 - - [28/May/2025 16:50:24] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+[2025-05-28 16:50:40,944] INFO in _internal: 10.1.39.126 - - [28/May/2025 16:50:40] "GET / HTTP/1.1" 200 -
+[2025-05-28 16:50:41,027] INFO in _internal: 10.1.39.126 - - [28/May/2025 16:50:41] "GET /static/style.css HTTP/1.1" 200 -
+[2025-05-28 16:50:41,057] INFO in _internal: 10.1.39.126 - - [28/May/2025 16:50:41] "[36mGET /static/assets/zg.jpg HTTP/1.1[0m" 304 -
+[2025-05-28 16:50:41,058] INFO in _internal: 10.1.39.126 - - [28/May/2025 16:50:41] "[36mGET /static/assets/sorting.png HTTP/1.1[0m" 304 -
+[2025-05-28 16:50:41,160] INFO in _internal: 10.1.39.126 - - [28/May/2025 16:50:41] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+[2025-05-28 16:50:48,394] INFO in _internal: 10.1.39.126 - - [28/May/2025 16:50:48] "GET / HTTP/1.1" 200 -
+[2025-05-28 16:50:48,456] INFO in _internal: 10.1.39.126 - - [28/May/2025 16:50:48] "GET /static/style.css HTTP/1.1" 200 -
+[2025-05-28 16:50:48,475] INFO in _internal: 10.1.39.126 - - [28/May/2025 16:50:48] "[36mGET /static/assets/zg.jpg HTTP/1.1[0m" 304 -
+[2025-05-28 16:50:48,507] INFO in _internal: 10.1.39.126 - - [28/May/2025 16:50:48] "[36mGET /static/assets/sorting.png HTTP/1.1[0m" 304 -
+[2025-05-28 16:50:48,543] INFO in _internal: 10.1.39.126 - - [28/May/2025 16:50:48] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+[2025-05-28 16:50:57,735] INFO in _internal: 10.1.39.126 - - [28/May/2025 16:50:57] "GET / HTTP/1.1" 200 -
+[2025-05-28 16:50:57,807] INFO in _internal: 10.1.39.126 - - [28/May/2025 16:50:57] "GET /static/style.css HTTP/1.1" 200 -
+[2025-05-28 16:50:57,821] INFO in _internal: 10.1.39.126 - - [28/May/2025 16:50:57] "[36mGET /static/assets/zg.jpg HTTP/1.1[0m" 304 -
+[2025-05-28 16:50:57,866] INFO in _internal: 10.1.39.126 - - [28/May/2025 16:50:57] "[36mGET /static/assets/sorting.png HTTP/1.1[0m" 304 -
+[2025-05-28 16:50:57,899] INFO in _internal: 10.1.39.126 - - [28/May/2025 16:50:57] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
