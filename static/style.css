@@ -1,358 +1,525 @@
 :root {
-    font-family: 'Poppins', sans-serif;
-  }
+  font-family: 'Poppins', sans-serif;
+}
   
-
 body {
-    margin: 0;
-    font-family: 'Poppins', sans-serif;
-    background: #f2f4f8;
-    color: #333;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #f2f4f8;
+  color: #333;
 }
 
 header {
-    background: #000000;
-    padding: 20px 40px;
-    color: white;
-    position: relative;
+  background: #000000;
+  padding: 20px 40px;
+  color: white;
+  position: relative;
 }
 
 .navbar {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  height: 100px;
 }
 
 .logo {
-    position: absolute;
-    left: 0;
-    height: 100px;
+  position: absolute;
+  left: 0;
+  height: 100px;
 }
 
 .title {
-    margin: 0;
-    font-size: 38px;
+  margin: 0;
+  font-size: 38px;
 }
 
 main {
-    max-width: 600px;
-    margin: 50px auto;
-    background: white;
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    text-align: center;
+  max-width: 600px;
+  margin: 50px auto;
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
 }
 
 .upload-box {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .function {
-    display: flex;
-    gap: 15px;
-    justify-content: center;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
 }
 
-.function-btn {
-    font-family: 'Poppins', sans-serif;
-    background: #198754 !important;
-    color: white;
-    width: 180px;
-    height: 50px;
-    border: none;
-    margin-top: 10px;
-    border-radius: 8px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background 0.3s;
+.function-btn { /* Este é o estilo dos botões principais (Dividir, Unir, Organizar) */
+  font-family: 'Poppins', sans-serif;
+  background: #198754 !important; 
+  color: white;
+  width: 180px;
+  height: 50px;
+  border: none;
+  margin-top: 10px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
 }
 
 .function-btn:hover {
-    background: #146c43;
+  background: #146c43;
+}
+
+.function-btn.disabled {
+  opacity: 0.5;  
+  pointer-events: none;  
+  cursor: not-allowed;   
 }
 
 #file-name {
-    margin-top: 10px;
-    font-weight: bold;
-    display: block;
-    text-align: center;
-    margin-bottom: 0;
+  margin-top: 10px;
+  font-weight: bold;
+  display: block;
+  text-align: center;
+  margin-bottom: 0;
 }
 
 #status-message {
-    margin-top: 10px;
-    font-weight: bold;
-    text-align: center;
+  margin-top: 10px;
+  font-weight: bold;
+  text-align: center;
 }
 
-
 #drop-zone {
-    position: relative;
-    padding: 40px;
-    text-align: center;
-    min-height: 40px;
-    border-radius: 10px;
-    background-color: #f9f9f9;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    transform: scale(1);
-    transition: transform 0.3s ease;
-    align-items: center;
-    overflow: hidden;
+  position: relative;
+  padding: 40px;
+  text-align: center;
+  min-height: 40px;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transform: scale(1);
+  transition: transform 0.3s ease; /* Nota: Duas transições de transform. Unificar se possível. */
+  align-items: center;
+  overflow: hidden;
 }
 
 #drop-zone::before {
-    content: "";
-    position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
-    border: 2px dashed transparent;
-    border-radius: 10px;
-    background:
-        linear-gradient(90deg, #4a90e2 50%, transparent 50%) repeat-x,
-        linear-gradient(90deg, #4a90e2 50%, transparent 50%) repeat-x,
-        linear-gradient(0deg, #4a90e2 50%, transparent 50%) repeat-y,
-        linear-gradient(0deg, #4a90e2 50%, transparent 50%) repeat-y;
-    background-size: 10px 2px, 10px 2px, 2px 10px, 2px 10px;
-    background-position: 0 0, 0 100%, 0 0, 100% 0;
-    animation: borderMove 0.3s linear infinite;
-    pointer-events: none;
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  border: 2px dashed transparent;
+  border-radius: 10px;
+  background:
+    linear-gradient(90deg, #4a90e2 50%, transparent 50%) repeat-x,
+    linear-gradient(90deg, #4a90e2 50%, transparent 50%) repeat-x,
+    linear-gradient(0deg, #4a90e2 50%, transparent 50%) repeat-y,
+    linear-gradient(0deg, #4a90e2 50%, transparent 50%) repeat-y;
+  background-size: 10px 2px, 10px 2px, 2px 10px, 2px 10px;
+  background-position: 0 0, 0 100%, 0 0, 100% 0;
+  animation: borderMove 0.3s linear infinite;
+  pointer-events: none;
 }
 
 @keyframes borderMove {
-    0% {
-        background-position:
-            0 0, 0 100%, 0 0, 100% 0;
-    }
-    100% {
-        background-position:
-            10px 0, -10px 100%, 0 -10px, 100% 10px;
-    }
+  0% {
+    background-position:
+      0 0, 0 100%, 0 0, 100% 0;
+  }
+  100% {
+    background-position:
+      10px 0, -10px 100%, 0 -10px, 100% 10px;
+  }
 }
 
 #drop-zone:hover {
-    background-color: #e4eaee;
-    transform: scale(1.05);
-    transition: transform 0.3s ease;
+  background-color: #e4eaee;
+  transform: scale(1.05);
+/*  transition: transform 0.3s ease; Removido pois já existe um acima */
 }
 
 .preview-grid {
-    margin-top: 1rem;
-    padding: 10px;
-    background-color: #fafafa;
-    border-radius: 8px;
-    box-shadow: inset 0 0 10px rgba(0,0,0,0.05);
+  margin-top: 1rem;
+  padding: 10px;
+  background-color: #fafafa;
+  border-radius: 8px;
+  box-shadow: inset 0 0 10px rgba(0,0,0,0.05);
+    position: relative; /* Importante para o posicionamento absoluto do container de botões */
 }
 
 .sortable-preview {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-    justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
 }
 
 .sortable-preview canvas {
-    width: 160px;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    cursor: move;
-    transition: transform 0.2s ease;
+  width: 160px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  cursor: move;
+  transition: transform 0.2s ease;
 }
 
 .sortable-preview canvas:hover {
-    transform: scale(1.03);
+  transform: scale(1.03);
 }
 
+#preview-container-grid {
+    position: relative;
+}
+
+#page-action-buttons-container {
+    /* display: none; Será 'flex' quando visível, controlado pelo JS */
+    position: absolute; 
+    top: 10px;          
+    right: 15px;         
+    z-index: 1001;       
+    
+    display: flex;       
+    align-items: center;    
+    gap: 8px;            
+}
+
+/* Estilo base comum para os botões de ação */
+.page-action-btn {
+    padding: 0 10px; /* Padding horizontal para botões com texto */
+    height: 32px;      /* Altura fixa para todos os botões */
+    font-size: 12px;     
+    font-family: 'Poppins', sans-serif; 
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+    
+    display: inline-flex; /* Para alinhar conteúdo interno (texto/ícone) */
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.page-action-btn:hover {
+    transform: scale(1.05); 
+}
+
+/* Estilo específico para botões que são apenas ícones */
+.page-action-btn--icon-only {
+    padding: 0;      /* Remove padding horizontal */
+    width: 32px;     /* Largura igual à altura para ser quadrado */
+}
+
+.page-action-btn--icon-only img {
+    width: 18px;  /* Tamanho da imagem do ícone interno */
+    height: 18px; /* Tamanho da imagem do ícone interno */
+    display: block;
+}
+
+/* Botão "Selecionar Todas" */
+#select-all-pages-btn {
+    background-color: #5bc0de; /* Azul claro (info) */
+}
+#select-all-pages-btn:hover {
+    background-color: #31b0d5; 
+}
+
+/* Botão "Girar Selecionadas" */
+#rotate-selected-btn {
+    background-color: #007bff; /* Azul (primary) */
+}
+#rotate-selected-btn:hover {
+    background-color: #0056b3; 
+}
+
+/* Botão "Girar Todas as Páginas" (que agora é um <button> com id="rotate-icon") */
+#rotate-icon { /* O ID foi mantido no botão para o JS existente funcionar */
+    background-color: #28a745; /* Verde (success) */
+}
+#rotate-icon:hover {
+    background-color: #1e7e34; 
+}
+
+/* Estilo para as páginas selecionadas (já existente e correto) */
+.preview-wrapper.selected canvas {
+    border: 3px solid #007bff;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+}
+
+/* Estilos para .sortable-fallback (se estiver usando forceFallback: true) */
+.sortable-fallback {
+    opacity: 0.7;
+    background-color: #e9ecef; 
+    border: 1px dashed #6c757d;
+}
 
 #error-message {
-    display: none;
-    background-color: #f44336;
-    color: white;
-    padding: 15px;
-    margin: 10px 0;
-    border-radius: 5px;
-    font-size: 16px;
-    text-align: center;
-    animation: slide-in 0.5s ease-out;
+  display: none;
+  background-color: #f44336;
+  color: white;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 5px;
+  font-size: 16px;
+  text-align: center;
+  animation: slide-in 0.5s ease-out;
 }
 
-#error-message2 {
-    display: none;
-    background-color: #f44336;
-    color: white;
-    padding: 15px;
-    margin: 10px 0;
-    border-radius: 5px;
-    font-size: 16px;
-    text-align: center;
-    animation: slide-in 0.5s ease-out;
+#error-message2 { /* Você tem #error-message2 e #error-message3, apenas incluí o 2 como exemplo */
+  display: none;
+  background-color: #f44336; /* Cor diferente para diferenciar se necessário, ou manter igual */
+  color: white;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 5px;
+  font-size: 16px;
+  text-align: center;
+  animation: slide-in 0.5s ease-out;
 }
 
 #error-message3 {
-    display: none;
-    background-color: #f44336;
-    color: white;
-    padding: 15px;
-    margin: 10px 0;
-    border-radius: 5px;
-    font-size: 16px;
-    text-align: center;
-    animation: slide-in 0.5s ease-out;
+  display: none;
+  background-color: #f44336;
+  color: white;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 5px;
+  font-size: 16px;
+  text-align: center;
+  animation: slide-in 0.5s ease-out;
 }
+
 
 .merge-menu {
-    position: fixed;
-    top: 0;
-    right: -600px;
-    width: 400px;
-    height: 100%;
-    background-color: #fff;
-    box-shadow: -4px 0 8px rgba(0, 0, 0, 0.2);
-    padding: 20px;
-    transition: right 0.3s ease;
-    z-index: 1000;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  position: fixed;
+  top: 0;
+  right: -600px;
+  width: 400px;
+  height: 100%;
+  background-color: #fff;
+  box-shadow: -4px 0 8px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  transition: right 0.3s ease;
+  z-index: 1000; /* Ajustado para ser menor que #page-action-buttons-container se houver sobreposição */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
+/* ... (o restante do seu CSS para .merge-menu h3, .split-menu, etc. continua aqui) ... */
+/* Cole o restante do seu CSS original abaixo desta linha */
+
 .merge-menu h3 {
-    margin-top: 20px;
-    font-size: 30px;
+  margin-top: 20px;
+  font-size: 30px;
 }
 
 .split-menu {
-    position: fixed;
-    top: 0;
-    right: -600px;
-    width: 400px;
-    height: 100%;
-    background-color: #fff;
-    box-shadow: -4px 0 8px rgba(0, 0, 0, 0.2);
-    padding: 20px;
-    transition: right 0.3s ease;
-    z-index: 1000;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  position: fixed;
+  top: 0;
+  right: -600px;
+  width: 400px;
+  height: 100%;
+  background-color: #fff;
+  box-shadow: -4px 0 8px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  transition: right 0.3s ease;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .split-menu h3 {
-    margin-top: 20px;
-    font-size: 18px;
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+.organize-menu {
+  position: fixed;
+  top: 0;
+  right: -600px;
+  width: 400px;
+  height: 100%;
+  background-color: #fff;
+  box-shadow: -4px 0 8px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  transition: right 0.3s ease;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.organize-menu h3 {
+  margin-top: 20px;
+  font-size: 24px;
+}
+
+.convert-menu {
+  position: fixed;
+  top: 0;
+  right: -600px;
+  width: 400px;
+  height: 100%;
+  background-color: #fff;
+  box-shadow: -4px 0 8px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  transition: right 0.3s ease;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.convert-menu h3 {
+  margin-top: 20px;
+  font-size: 24px;
 }
 
 #start-merge {
-    font-family: 'Poppins', sans-serif;
-    color: white;
-    margin: 0; 
-    padding: 15px 40px; 
-    background-color: #008cff;
-    border-radius: 8px;
-    width: auto;           
-    min-width: 200px;      
-    max-width: 700px;      
-    text-align: center;
-    font-weight: bold;
-    font-size: 20px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, opacity 0.3s ease, border 0.3s ease, transform 0.3s ease;
-    box-sizing: border-box;
-    border: none;
-    position: absolute;   
-    bottom: 70px;          
-    left: 50%;           
-    transform: translateX(-50%);
-    transform-origin: center center; 
-    z-index: 10;
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  margin: 0; 
+  padding: 15px 40px; 
+  background-color: #008cff;
+  border-radius: 8px;
+  width: auto;       
+  min-width: 200px;    
+  max-width: 700px;    
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, opacity 0.3s ease, border 0.3s ease, transform 0.3s ease;
+  box-sizing: border-box;
+  border: none;
+  position: absolute;   
+  bottom: 70px;      
+  left: 50%;       
+  transform: translateX(-50%);
+  transform-origin: center center; 
+  z-index: 10;
 }
 
 #start-merge:hover {
-    background-color: #115cce;
-    transform: translateX(-50%) scale(1.1);
-    max-width: 740px; 
+  background-color: #115cce;
+  transform: translateX(-50%) scale(1.1);
+  max-width: 740px; 
 }
 
 #start-split {
-    font-family: 'Poppins', sans-serif;
-    color: white;
-    margin: 0; 
-    padding: 15px 40px; 
-    background-color: #008cff;
-    border-radius: 8px;
-    width: auto;           
-    min-width: 200px;      
-    max-width: 700px;      
-    text-align: center;
-    font-weight: bold;
-    font-size: 20px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, opacity 0.3s ease, border 0.3s ease, transform 0.3s ease;
-    box-sizing: border-box;
-    border: none;
-    position: absolute;   
-    bottom: 70px;          
-    left: 50%;           
-    transform: translateX(-50%);
-    transform-origin: center center; 
-    z-index: 10;
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  margin: 0; 
+  padding: 15px 40px; 
+  background-color: #008cff;
+  border-radius: 8px;
+  width: auto;       
+  min-width: 200px;    
+  max-width: 700px;    
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, opacity 0.3s ease, border 0.3s ease, transform 0.3s ease;
+  box-sizing: border-box;
+  border: none;
+  position: absolute;   
+  bottom: 70px;      
+  left: 50%;       
+  transform: translateX(-50%);
+  transform-origin: center center; 
+  z-index: 10;
 }
 
 #start-split:hover:not(:disabled) {
-    background-color: #115cce;
-    transform: translateX(-50%) scale(1.1);
-    max-width: 740px; 
+  background-color: #115cce;
+  transform: translateX(-50%) scale(1.1);
+  max-width: 740px; 
 }
 
-/* Quando estiver desabilitado */
 #start-split:disabled {
-    background-color: #888888;
-    cursor: not-allowed;
-    opacity: 0.6;
-    transform: translateX(-50%) scale(1);
-    max-width: 700px;
+  background-color: #888888;
+  cursor: not-allowed;
+  opacity: 0.6;
+  transform: translateX(-50%) scale(1);
+  max-width: 700px;
 }
 
 .split-option {
-    margin: 30px 0 100px 0; /* Espaçamento para o input e texto */
-    width: 100%;
-    text-align: center;
-    font-size: 16px;
-    font-weight: 500;
-    color: #444;
-    font-family: 'Poppins', sans-serif;
+  margin: 30px 0 100px 0; 
+  width: 100%;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+  color: #444;
+  font-family: 'Poppins', sans-serif;
 }
 
 .split-option p {
-    margin-bottom: 12px;
+  margin-bottom: 12px;
 }
 
 #split-parts-input,
 #split-size-input {
-    width: 80px;
-    padding: 8px 10px;
-    font-size: 18px;
-    border: 2px solid #008cff;
-    border-radius: 8px;
-    text-align: center;
-    transition: border-color 0.3s ease;
-    outline-offset: 2px;
-    font-family: 'Poppins', sans-serif;
+  width: 80px;
+  padding: 8px 10px;
+  font-size: 18px;
+  border: 2px solid #008cff;
+  border-radius: 8px;
+  text-align: center;
+  transition: border-color 0.3s ease;
+  outline-offset: 2px;
+  font-family: 'Poppins', sans-serif;
 }
 
 #split-parts-input.active,
 #split-size-input.active {
-    background-color: #115cce; 
-    font-weight: bold;
-    transition: border 0.2s ease; 
-    padding: 14px;
-    transition: padding 0.3s ease;
+  background-color: #115cce; 
+  font-weight: bold;
+  transition: border 0.2s ease; 
+  padding: 14px;
+  transition: padding 0.3s ease;
+}
+
+#start-organize {
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  margin: 0; 
+  padding: 15px 40px; 
+  background-color: #008cff;
+  border-radius: 8px;
+  width: auto;       
+  min-width: 250px;    
+  max-width: 700px;    
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, opacity 0.3s ease, border 0.3s ease, transform 0.3s ease;
+  box-sizing: border-box;
+  border: none;
+  position: absolute;   
+  bottom: 70px;      
+  left: 50%;       
+  transform: translateX(-50%);
+  transform-origin: center center; 
+  z-index: 10;
+}
+
+#start-organize:hover {
+  background-color: #115cce;
+  transform: translateX(-50%) scale(1.1);
+  max-width: 740px; 
 }
 
 #parts-option,
@@ -361,145 +528,165 @@ main {
 }
 
 .mode-btn {
-    font-family: 'Poppins', sans-serif;
-    color: white;
-    margin: 15px 0;
-    padding: 10px;
-    background-color: #008cff;
-    border-radius: 8px;
-    width: 95%;  /* largura maior */
-    text-align: center;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s ease, opacity 0.3s ease, border 0.3s ease, padding 0.3s ease;
-    border: none;
-    user-select: none;
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  margin: 15px 0;
+  padding: 10px;
+  background-color: #008cff;
+  border-radius: 8px;
+  width: 95%; 
+  text-align: center;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, opacity 0.3s ease, border 0.3s ease, padding 0.3s ease;
+  border: none;
+  user-select: none;
 }
 
 .mode-btn:hover {
-    background-color: #115cce;
-    transition: border 0.2s ease;
-    padding: 14px;
-    transition: padding 0.3s ease;
+  background-color: #115cce;
+  transition: border 0.2s ease; /* Nota: Você está transicionando 'border' mas não define uma borda inicial ou no hover. */
+  padding: 14px;
+  transition: padding 0.3s ease; /* Nota: Duas transições de padding, a última sobrescreverá */
 }
 
 .mode-btn.active {
-    background-color: #115cce;
-    font-weight: bold;
-    transition: border 0.2s ease;
-    padding: 14px;
-    transition: padding 0.3s ease;
+  background-color: #115cce;
+  font-weight: bold;
+  transition: border 0.2s ease;
+  padding: 14px;
+  transition: padding 0.3s ease;
 }
 
-#functions-btn {
-    z-index: 1100;
+#functions-btn { /* Este ID não parece estar no HTML fornecido. Verificar se é usado. */
+  z-index: 1100;
 }
 
 .close-btn {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    background: none;
-    border: none;
-    color: #333;
-    font-size: 24px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: color 0.3s ease;
-    margin-bottom: 5px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  color: #333;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  margin-bottom: 5px;
 }
 
 .close-btn:hover {
-    color: #ff0000;
+  color: #ff0000;
 }
 
 @keyframes slide-in {
-    from {
-        transform: translateY(-100%);
-    }
-    to {
-        transform: translateY(0);
-    }
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
 }
 
-/* Spinner centralizado no meio do menu */
 .spinner {
-  position: absolute; /* posiciona em relação ao #mergeMenu ou #splitMenu */
+  position: absolute; 
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 1000; /* para ficar na frente */
-  width: 50px;   /* ajuste o tamanho */
+  z-index: 1000; 
+  width: 50px;   
   height: 50px;
-  border: 6px solid #f3f3f3; /* base do spinner */
-  border-top: 6px solid #3498db; /* cor da borda animada */
+  border: 6px solid #f3f3f3; 
+  border-top: 6px solid #3498db; 
   border-radius: 50%;
   animation: spin 1s linear infinite;
 }
 
-/* Animação para girar */
 @keyframes spin {
   0% { transform: translate(-50%, -50%) rotate(0deg); }
   100% { transform: translate(-50%, -50%) rotate(360deg); }
 }
 
-/* Esconde o spinner quando tiver a classe hidden */
 .spinner.hidden {
   display: none;
 }
 
-#pdf-preview-container {
-  max-width: 400px;   /* ou 100% para responsivo */
+.rotate-btn { /* Este é o botão de rotação individual DENTRO de cada preview-wrapper */
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background-color: #198754;
+  border: none;
+  color: white;
+  font-size: 18px; /* Grande para um ícone, talvez '14px' ou '12px' se for só o símbolo ⟳ */
+  padding: 4px 8px;
+  border-radius: 4px; /* Poderia ser 50% para um botão redondo se o conteúdo for um símbolo pequeno */
+  cursor: pointer;
+  z-index: 5; /* Deve ser maior que o z-index do canvas se houver sobreposição */
+    line-height: 1; /* Para centralizar melhor o texto/símbolo do botão */
+}
+
+.rotate-btn:hover {
+  background-color: #145c32;
+}
+
+/* #rotate-all-btn {  Este ID parece ser de um botão maior, não o ícone de girar todos.
+  font-family: 'Poppins', sans-serif;
+  color: white;
+    ...
+} */
+
+#pdf-preview-container { /* Este ID não parece estar no HTML, talvez seja um nome antigo? */
+  max-width: 400px; 
   margin: 0 auto;
 }
 
-#pdf-canvas {
-  width: 100%;         /* canvas ocupa toda a largura da div */
-  height: auto;        /* altura automática proporcional */
+#pdf-canvas { /* Este ID não parece estar no HTML, os canvas são criados dinamicamente com a classe .preview-canvas */
+  width: 100%; 
+  height: auto;  
   display: block;
   border-radius: 0.5rem;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .clickable {
-    cursor: pointer;
-    text-decoration: none;
-    color: #666; 
+  cursor: pointer;
+  text-decoration: none;
+  color: #666; 
 }
 
 .clickable:visited {
-    color: #666;
+  color: #666;
 }
 
 .preview-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 10px;
-    position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px; /* Ajustado para um valor menor que o gap do .sortable-preview para evitar espaçamento duplo excessivo */
+  position: relative; /* Importante para o .remove-btn e .rotate-btn */
 }
 
 .file-name {
-    margin-top: 5px;
-    font-size: 14px;
-    color: #333;
-    word-break: break-word;
-    text-align: center;
-    max-width: 200px;
+  margin-top: 5px;
+  font-size: 14px;
+  color: #333;
+  word-break: break-word;
+  text-align: center;
+  max-width: 160px; /* Para alinhar com a largura do canvas */
 }
 
-#preview-container-grid {
-  position: relative;
-}
-
-#sort-icon {
+#sort-icon { /* Ícone para ordenar ARQUIVOS (não páginas) */
   position: absolute;
-  top: 25px;
-  right: 20px;
+  top: 15px; /* Ajustado para alinhar com o novo container de botões de página */
+  /* right: 15px;  Esta posição pode conflitar com #page-action-buttons-container. */
+  /* Decida onde este ícone deve ficar. Se for oposto aos botões de ação da página: */
+  left: 15px; /* Exemplo: movido para a esquerda */
   width: 24px;
   height: 24px;
   cursor: pointer;
-  z-index: 1000;
+  z-index: 1000; /* Mesmo z-index dos outros ícones de topo */
   transition: transform 0.2s ease;
 }
 
@@ -510,13 +697,13 @@ main {
 #sort-menu {
   display: none;
   position: absolute;
-  top: 54px; /* abaixo do ícone */
-  left: 93%;
+  top: 45px; /* Ajustado para a nova posição do #sort-icon */
+  left: 10px; /* Ajustado para a nova posição do #sort-icon */
   background: white;
   border: 1px solid #ccc;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   padding: 10px;
-  z-index: 999;
+  z-index: 999; /* Menor que os ícones, para ficar atrás se necessário, mas idealmente não sobrepõe */
   border-radius: 6px;
   min-width: 180px;
 }
@@ -537,28 +724,42 @@ main {
   background-color: #e5e7eb;
 }
 
-.remove-btn {
-    position: absolute;
-    top: 2px;
-    right: 2px;
-    background: rgba(255, 0, 0, 0.8);
-    color: white;
-    border: none;
-    border-radius: 50%;
-    width: 20px;
-    height: 20px;
-    cursor: pointer;
-    font-weight: bold;
-    line-height: 18px;
-    padding: 0;
+/* .rotate-icon é o seletor original para o <img> de girar todas as páginas */
+/* Agora é #rotate-icon, e seu estilo está na seção de #page-action-buttons-container */
+
+.remove-btn { /* Botão de remover arquivos/previews */
+  position: absolute;
+  top: -5px;  /* Ajustado para ficar um pouco para fora e acima */
+  right: -5px; /* Ajustado para ficar um pouco para fora e acima */
+  background: rgba(200, 0, 0, 0.8); /* Vermelho um pouco menos intenso */
+  color: white;
+  border: 2px solid white; /* Borda para destacar do canvas */
+  border-radius: 50%;
+  width: 22px;  /* Aumentado ligeiramente */
+  height: 22px; /* Aumentado ligeiramente */
+  cursor: pointer;
+  font-weight: bold;
+  line-height: 18px; /* Ajustar para centralizar o '×' se necessário */
+  padding: 0;
+    display: flex;      /* Para centralizar o '×' facilmente */
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;     /* Tamanho do '×' */
+    box-shadow: 0 1px 3px rgba(0,0,0,0.3); /* Sombra sutil */
 }
+.remove-btn:hover {
+    background: rgba(220, 0, 0, 1); /* Vermelho mais vivo no hover */
+    transform: scale(1.1);
+}
+
 
 footer {
-    align-items: center;
-    text-align: center;
-    margin-top: 40px;
-    color: #666;
-    font-size: 14px;
+  align-items: center; /* display:flex; é necessário para align-items funcionar */
+    display: flex; /* Adicionado para que gap e align-items funcionem */
+    justify-content: center; /* Para centralizar os itens do footer */
+  text-align: center;
+  margin-top: 40px;
+  color: #666;
+  font-size: 14px;
     gap: 10px;
 }
-

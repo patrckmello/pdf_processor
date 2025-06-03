@@ -154,6 +154,52 @@ def split_pdfs():
         download_name='divididos.zip'
     )
 
+@app.route('/organize', methods=['POST'])
+def organize_pdf():
+    file = request.files.get('pdf')
+    new_order = request.form.get('order')
+    if not file or not new_order:
+        return abort(400, 'Arquivo ou ordem não enviados.')
+
+    import json
+    new_order = json.loads(new_order)
+
+    pdf_bytes = file.read()
+    pdf_doc = fitz.open(stream=pdf_bytes, filetype='pdf')
+    new_doc = fitz.open()
+
+    for item in new_order:
+        page_index = item['page'] - 1
+        rotation = item.get('rotation', 0)
+        page = pdf_doc[page_index]
+        page.set_rotation(rotation)
+        new_doc.insert_pdf(pdf_doc, from_page=page_index, to_page=page_index)
+    buffer = io.BytesIO()
+    new_doc.save(buffer)
+    buffer.seek(0)
+    return send_file(buffer, as_attachment=True, download_name='organized.pdf', mimetype='application/pdf')
+
+@app.route('/convert', methods=['POST'])
+def convert_to_pdf():
+    files = request.files.getlist('files')
+    if not files:
+        return abort(400, 'Nenhum arquivo enviado para conversão.')
+
+    pdf_output = fitz.open()
+    for file in files:
+        filename = file.filename
+        if filename.lower().endswith(('.png', '.jpg', '.jpeg')):
+            img = fitz.open(stream=file.read(), filetype='png')
+            pdf_output.insert_pdf(img)
+        else:
+            return abort(400, f'Formato não suportado para conversão: {filename}')
+
+    pdf_buffer = io.BytesIO()
+    pdf_output.save(pdf_buffer)
+    pdf_buffer.seek(0)
+
+    return send_file(pdf_buffer, as_attachment=True, download_name='convertido.pdf', mimetype='application/pdf')
+
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0', port=5007)
