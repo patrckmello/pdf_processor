@@ -25,14 +25,16 @@
                 <p>Arraste ou clique para selecionar um arquivo PDF</p>
                 <input type="file" id="fileInput" hidden multiple/>
             </div>
+
+            <div id="organize-function-buttons" style="display: none;">
+                <button id="select-all-btn" class="function-btn">Selecionar Todas</button>
+                <button id="rotate-selected-btn" class="function-btn">Girar Selecionadas</button>
+                <button id="deselect-all-btn" class="function-btn">Desselecionar Todas</button>
+                <button id="back-btn" class="function-btn">Voltar</button>
+            </div>
+
             <div id="preview-container-grid" class="preview-grid" style="display: none;">
                 <img src="{{ url_for('static', filename='assets/sorting.png') }}" alt="Ordernar itens" class="ordenar-icon" id="sort-icon">
-                
-                <div id="page-action-buttons-container" style="display: none;">
-                    <button id="select-all-pages-btn" title="Selecionar Todas as Páginas" class="page-action-btn">Sel. Todas</button>
-                    <button id="rotate-selected-btn" title="Girar Selecionadas" class="page-action-btn">Girar Sel.</button> 
-                </div>
-                
                 <p id="preview-title" class="text-sm text-gray-600 mb-1">Pré-visualização (arraste para ordenar):</p>
                 <div id="sortable-preview" class="sortable-preview"></div>
                 
@@ -47,13 +49,12 @@
         <div id="error-message2" class="error-message2" style="display: none;"></div>
         <div id="error-message3" class="error-message3" style="display: none;"></div>
         
-        <div class="function">
+        <div id="main-function-buttons">
             <button id="split-btn" class="function-btn">Dividir</button>
             <button id="merge-btn" class="function-btn">Unir</button>
             <button id="organize-btn" class="function-btn">Organizar</button>
-            <!-- <button id="convert-btn" class="function-btn">Converter</button> -->
         </div>
-       
+
         <div class="merge-menu" id="mergeMenu">
             <button class="close-btn" onclick="closeMergeMenu()">×</button>
             <h3>Unir PDFs na <br>ordem selecionada</h3>
@@ -87,12 +88,6 @@
             <button class="close-btn" onclick="closeOrganizeMenu()">×</button>
             <h3>Organizar Páginas do PDF</h3>
             <button id="start-organize">Aplicar Ordem</button>
-            <div id="loading-spinner" class="spinner hidden"></div>
-        </div>
-        <div class="convert-menu" id="convertMenu">
-            <button class="close-btn" onclick="closeConvertMenu()">×</button>
-            <h3>Converter Documento</h3>
-            <button id="start-convert">Converter Agora</button>
             <div id="loading-spinner" class="spinner hidden"></div>
         </div>
         </main>
