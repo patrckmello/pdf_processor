@@ -1,16 +1,20 @@
+/* --- Base e Tipografia --- */
 :root {
+    /* Define a fonte padrão para todo o documento */
     font-family: 'Poppins', sans-serif;
-  }
-  
+}
 
 body {
+    /* Estilos básicos do corpo da página */
     margin: 0;
     font-family: 'Poppins', sans-serif;
     background: #f2f4f8;
     color: #333;
 }
 
+/* --- Layout Principal --- */
 header {
+    /* Estilos do cabeçalho */
     background: #000000;
     padding: 20px 40px;
     color: white;
@@ -18,6 +22,7 @@ header {
 }
 
 .navbar {
+    /* Estilos da barra de navegação */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -26,17 +31,20 @@ header {
 }
 
 .logo {
+    /* Estilos do logotipo */
     position: absolute;
     left: 0;
     height: 100px;
 }
 
 .title {
+    /* Estilos do título principal */
     margin: 0;
     font-size: 38px;
 }
 
 main {
+    /* Estilos da área de conteúdo principal */
     max-width: 600px;
     margin: 50px auto;
     background: white;
@@ -46,17 +54,21 @@ main {
     text-align: center;
 }
 
+/* --- Seção de Upload e Botões de Função --- */
 .upload-box {
+    /* Estilos da caixa de upload */
     margin-bottom: 20px;
 }
 
 .function {
+    /* Estilos do contêiner dos botões de função */
     display: flex;
     gap: 15px;
     justify-content: center;
 }
 
 .function-btn {
+    /* Estilos dos botões de função (Merge, Split, Organize) */
     font-family: 'Poppins', sans-serif;
     background: #198754 !important;
     color: white;
@@ -72,10 +84,12 @@ main {
 }
 
 .function-btn:hover {
+    /* Estilos do botão de função ao passar o mouse */
     background: #146c43;
 }
 
 #file-name {
+    /* Estilos para o nome do arquivo */
     margin-top: 10px;
     font-weight: bold;
     display: block;
@@ -84,12 +98,14 @@ main {
 }
 
 #status-message {
+    /* Estilos para mensagens de status */
     margin-top: 10px;
     font-weight: bold;
     text-align: center;
 }
 
 #drop-zone {
+    /* Estilos da zona de arrastar e soltar */
     position: relative;
     padding: 40px;
     text-align: center;
@@ -108,21 +124,24 @@ main {
 }
 
 #drop-zone.disabled-upload {
-    background-color: rgba(200, 200, 200, 0.5); /* tom cinza translúcido */
+    /* Estilos para a zona de drop quando desabilitada */
+    background-color: rgba(200, 200, 200, 0.5);
     cursor: not-allowed;
     position: relative;
 }
 
 #drop-zone.disabled-upload::after {
+    /* Camada de bloqueio visual para zona de drop desabilitada */
     content: "";
     position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
-    background: rgba(255, 255, 255, 0.4); /* camada de bloqueio */
+    background: rgba(255, 255, 255, 0.4);
     pointer-events: all;
     z-index: 2;
 }
 
 #drop-zone::before {
+    /* Efeito de borda tracejada animada na zona de drop */
     content: "";
     position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
@@ -139,9 +158,8 @@ main {
     pointer-events: none;
 }
 
-
-
 @keyframes borderMove {
+    /* Animação da borda da zona de drop */
     0% {
         background-position:
             0 0, 0 100%, 0 0, 100% 0;
@@ -153,12 +171,15 @@ main {
 }
 
 #drop-zone:hover {
+    /* Estilos da zona de drop ao passar o mouse */
     background-color: #e4eaee;
     transform: scale(1.05);
     transition: transform 0.3s ease;
 }
 
+/* --- Pré-visualizações de Arquivos --- */
 .preview-grid {
+    /* Estilos do grid de pré-visualizações */
     margin-top: 1rem;
     padding: 10px;
     background-color: #fafafa;
@@ -167,6 +188,7 @@ main {
 }
 
 .sortable-preview {
+    /* Estilos do contêiner para pré-visualizações arrastáveis */
     display: flex;
     flex-wrap: wrap;
     gap: 15px;
@@ -174,6 +196,7 @@ main {
 }
 
 .sortable-preview canvas {
+    /* Estilos dos canvas de pré-visualização */
     width: 160px;
     height: auto;
     border-radius: 8px;
@@ -183,30 +206,33 @@ main {
 }
 
 .sortable-preview canvas:hover {
+    /* Estilos do canvas de pré-visualização ao passar o mouse */
     transform: scale(1.03);
 }
 
 .preview-wrapper {
-  border-radius: 8px;
-  transition: transform 0.2s ease;
-  position: relative;
+    /* Estilos do wrapper da pré-visualização (incluindo o botão de remover) */
+    border-radius: 8px;
+    transition: transform 0.2s ease;
+    position: relative;
 }
 
 .preview-wrapper:hover {
-  transform: scale(1.05);
-  z-index: 10;
+    /* Estilos do wrapper da pré-visualização ao passar o mouse */
+    transform: scale(1.05);
+    z-index: 10;
 }
 
 .preview-wrapper.selected {
-  outline: 3px solid #3b82f6;
-  outline-offset: 2px;
-  /* ou */
-  /* box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.7); */
+    /* Estilos para pré-visualizações selecionadas */
+    outline: 3px solid #3b82f6;
+    outline-offset: 2px;
 }
 
 .page-number {
+    /* Estilos do número da página na pré-visualização */
     position: absolute;
-    top: 5px; /* ou bottom: 5px, conforme preferir */
+    top: 5px;
     left: 5px;
     background-color: rgba(0,0,0,0.7);
     color: white;
@@ -216,466 +242,8 @@ main {
     z-index: 2;
 }
 
-#error-message {
-    display: none;
-    background-color: #f44336;
-    color: white;
-    padding: 15px;
-    margin: 10px 0;
-    border-radius: 5px;
-    font-size: 16px;
-    text-align: center;
-    animation: slide-in 0.5s ease-out;
-}
-
-#error-message2 {
-    display: none;
-    background-color: #f44336;
-    color: white;
-    padding: 15px;
-    margin: 10px 0;
-    border-radius: 5px;
-    font-size: 16px;
-    text-align: center;
-    animation: slide-in 0.5s ease-out;
-}
-
-#error-message3 {
-    display: none;
-    background-color: #f44336;
-    color: white;
-    padding: 15px;
-    margin: 10px 0;
-    border-radius: 5px;
-    font-size: 16px;
-    text-align: center;
-    animation: slide-in 0.5s ease-out;
-}
-
-.merge-menu {
-    position: fixed;
-    top: 0;
-    right: -600px;
-    width: 400px;
-    height: 100%;
-    background-color: #fff;
-    box-shadow: -4px 0 8px rgba(0, 0, 0, 0.2);
-    padding: 20px;
-    transition: right 0.3s ease;
-    z-index: 1000;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.merge-menu h3 {
-    margin-top: 20px;
-    font-size: 30px;
-}
-
-.split-menu {
-    position: fixed;
-    top: 0;
-    right: -600px;
-    width: 400px;
-    height: 100%;
-    background-color: #fff;
-    box-shadow: -4px 0 8px rgba(0, 0, 0, 0.2);
-    padding: 20px;
-    transition: right 0.3s ease;
-    z-index: 1000;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.split-menu h3 {
-    margin-top: 20px;
-    font-size: 18px;
-}
-
-.organize-menu {
-    position: fixed;
-    top: 0;
-    right: -600px;
-    width: 400px;
-    height: 100%;
-    background-color: #fff;
-    box-shadow: -4px 0 8px rgba(0, 0, 0, 0.2);
-    padding: 20px;
-    transition: right 0.3s ease;
-    z-index: 1000;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.organize-menu h3 {
-    margin-top: 20px;
-    font-size: 24px;
-}
-
-#organize-function-buttons {
-    display: flex;
-    gap: 10px;
-    margin-top: 10px;
-}
-
-#start-merge {
-    font-family: 'Poppins', sans-serif;
-    color: white;
-    margin: 0; 
-    padding: 15px 40px; 
-    background-color: #008cff;
-    border-radius: 8px;
-    width: auto;           
-    min-width: 200px;      
-    max-width: 700px;      
-    text-align: center;
-    font-weight: bold;
-    font-size: 20px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, opacity 0.3s ease, border 0.3s ease, transform 0.3s ease;
-    box-sizing: border-box;
-    border: none;
-    position: absolute;   
-    bottom: 70px;          
-    left: 50%;           
-    transform: translateX(-50%);
-    transform-origin: center center; 
-    z-index: 10;
-}
-
-#start-merge:hover {
-    background-color: #115cce;
-    transform: translateX(-50%) scale(1.1);
-    max-width: 740px; 
-}
-
-#start-split {
-    font-family: 'Poppins', sans-serif;
-    color: white;
-    margin: 0; 
-    padding: 15px 40px; 
-    background-color: #008cff;
-    border-radius: 8px;
-    width: auto;           
-    min-width: 200px;      
-    max-width: 700px;      
-    text-align: center;
-    font-weight: bold;
-    font-size: 20px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, opacity 0.3s ease, border 0.3s ease, transform 0.3s ease;
-    box-sizing: border-box;
-    border: none;
-    position: absolute;   
-    bottom: 70px;          
-    left: 50%;           
-    transform: translateX(-50%);
-    transform-origin: center center; 
-    z-index: 10;
-}
-
-#start-split:hover:not(:disabled) {
-    background-color: #115cce;
-    transform: translateX(-50%) scale(1.1);
-    max-width: 740px; 
-}
-
-/* Quando estiver desabilitado */
-#start-split:disabled {
-    background-color: #888888;
-    cursor: not-allowed;
-    opacity: 0.6;
-    transform: translateX(-50%) scale(1);
-    max-width: 700px;
-}
-
-.split-option {
-    margin: 30px 0 100px 0; /* Espaçamento para o input e texto */
-    width: 100%;
-    text-align: center;
-    font-size: 16px;
-    font-weight: 500;
-    color: #444;
-    font-family: 'Poppins', sans-serif;
-}
-
-.split-option p {
-    margin-bottom: 12px;
-}
-
-#split-parts-input,
-#split-size-input {
-    width: 80px;
-    padding: 8px 10px;
-    font-size: 18px;
-    border: 2px solid #008cff;
-    border-radius: 8px;
-    text-align: center;
-    transition: border-color 0.3s ease;
-    outline-offset: 2px;
-    font-family: 'Poppins', sans-serif;
-}
-
-#split-parts-input.active,
-#split-size-input.active {
-    background-color: #115cce; 
-    font-weight: bold;
-    transition: border 0.2s ease; 
-    padding: 14px;
-    transition: padding 0.3s ease;
-}
-
-#start-organize {
-     font-family: 'Poppins', sans-serif;
-    color: white;
-    margin: 0; 
-    padding: 15px 40px; 
-    background-color: #008cff;
-    border-radius: 8px;
-    width: auto;           
-    min-width: 250px;      
-    max-width: 700px;      
-    text-align: center;
-    font-weight: bold;
-    font-size: 20px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, opacity 0.3s ease, border 0.3s ease, transform 0.3s ease;
-    box-sizing: border-box;
-    border: none;
-    position: absolute;   
-    bottom: 70px;          
-    left: 50%;           
-    transform: translateX(-50%);
-    transform-origin: center center; 
-    z-index: 10;
-}
-
-#start-organize:hover {
-    background-color: #115cce;
-    transform: translateX(-50%) scale(1.1);
-    max-width: 740px; 
-}
-
-#parts-option,
-#size-option {
-  display: none;
-}
-
-.mode-btn {
-    font-family: 'Poppins', sans-serif;
-    color: white;
-    margin: 15px 0;
-    padding: 10px;
-    background-color: #008cff;
-    border-radius: 8px;
-    width: 95%;  /* largura maior */
-    text-align: center;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s ease, opacity 0.3s ease, border 0.3s ease, padding 0.3s ease;
-    border: none;
-    user-select: none;
-}
-
-.mode-btn:hover {
-    background-color: #115cce;
-    transition: border 0.2s ease;
-    padding: 14px;
-    transition: padding 0.3s ease;
-}
-
-.mode-btn.active {
-    background-color: #115cce;
-    font-weight: bold;
-    transition: border 0.2s ease;
-    padding: 14px;
-    transition: padding 0.3s ease;
-}
-
-#functions-btn {
-    z-index: 1100;
-}
-
-.close-btn {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    background: none;
-    border: none;
-    color: #333;
-    font-size: 24px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: color 0.3s ease;
-    margin-bottom: 5px;
-}
-
-.close-btn:hover {
-    color: #ff0000;
-}
-
-@keyframes slide-in {
-    from {
-        transform: translateY(-100%);
-    }
-    to {
-        transform: translateY(0);
-    }
-}
-
-/* Spinner centralizado no meio do menu */
-.spinner {
-  position: absolute; /* posiciona em relação ao #mergeMenu ou #splitMenu */
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 1000; /* para ficar na frente */
-  width: 50px;   /* ajuste o tamanho */
-  height: 50px;
-  border: 6px solid #f3f3f3; /* base do spinner */
-  border-top: 6px solid #3498db; /* cor da borda animada */
-  border-radius: 50%;
-  animation: spin 1s linear infinite;
-}
-
-/* Animação para girar */
-@keyframes spin {
-  0% { transform: translate(-50%, -50%) rotate(0deg); }
-  100% { transform: translate(-50%, -50%) rotate(360deg); }
-}
-
-/* Esconde o spinner quando tiver a classe hidden */
-.spinner.hidden {
-  display: none;
-}
-
-.rotate-btn {
-    position: absolute;
-    top: 5px;
-    right: 5px;
-    background-color: #198754;
-    border: none;
-    color: white;
-    font-size: 18px;
-    padding: 4px 8px;
-    border-radius: 4px;
-    cursor: pointer;
-    z-index: 5;
-}
-
-.rotate-btn:hover {
-    background-color: #145c32;
-}
-
-#rotate-all-btn {
-    font-family: 'Poppins', sans-serif;
-    color: white;
-    margin: 0 0 15px 0;
-    padding: 12px 30px;
-    background-color: #198754;  /* verde */
-    border-radius: 8px;
-    width: auto;
-    min-width: 200px;
-    max-width: 700px;
-    text-align: center;
-    font-weight: bold;
-    font-size: 18px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    box-sizing: border-box;
-    border: none;
-}
-
-#rotate-all-btn:hover {
-    background-color: #145c32;
-    transform: scale(1.05);
-}
-
-#pdf-preview-container {
-  max-width: 400px;   /* ou 100% para responsivo */
-  margin: 0 auto;
-}
-
-#pdf-canvas {
-  width: 100%;         /* canvas ocupa toda a largura da div */
-  height: auto;        /* altura automática proporcional */
-  display: block;
-  border-radius: 0.5rem;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.clickable {
-    cursor: pointer;
-    text-decoration: none;
-    color: #666; 
-}
-
-.clickable:visited {
-    color: #666;
-}
-
-.file-name {
-    margin-top: 5px;
-    font-size: 14px;
-    color: #333;
-    word-break: break-word;
-    text-align: center;
-    max-width: 200px;
-}
-
-#preview-container-grid {
-  position: relative;
-}
-
-#sort-icon {
-  position: absolute;
-  top: 25px;
-  right: 20px;
-  width: 24px;
-  height: 24px;
-  cursor: pointer;
-  z-index: 1000;
-  transition: transform 0.2s ease;
-}
-
-#sort-icon:hover {
-  transform: scale(1.1);
-}
-
-#sort-menu {
-  display: none;
-  position: absolute;
-  top: 54px; /* abaixo do ícone */
-  left: 93%;
-  background: white;
-  border: 1px solid #ccc;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  padding: 10px;
-  z-index: 999;
-  border-radius: 6px;
-  min-width: 180px;
-}
-
-#sort-menu button {
-  background-color: #f3f4f6;
-  border: none;
-  padding: 8px 12px;
-  width: 100%;
-  text-align: left;
-  cursor: pointer;
-  font-size: 14px;
-  border-radius: 4px;
-  transition: background-color 0.2s ease;
-}
-
-#sort-menu button:hover {
-  background-color: #e5e7eb;
-}
-
 .remove-btn {
+    /* Estilos do botão de remover na pré-visualização */
     position: absolute;
     top: 2px;
     right: 2px;
@@ -691,7 +259,412 @@ main {
     padding: 0;
 }
 
+.file-name {
+    /* Estilos para o nome do arquivo na pré-visualização */
+    margin-top: 5px;
+    font-size: 14px;
+    color: #333;
+    word-break: break-word;
+    text-align: center;
+    max-width: 200px;
+}
+
+#preview-container-grid {
+    /* Contêiner da grade de pré-visualização */
+    position: relative;
+}
+
+/* --- Mensagens de Erro --- */
+#error-message,
+#error-message2,
+#error-message3 {
+    /* Estilos para mensagens de erro */
+    display: none;
+    background-color: #f44336;
+    color: white;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+    font-size: 16px;
+    text-align: center;
+    animation: slide-in 0.5s ease-out;
+}
+
+@keyframes slide-in {
+    /* Animação para mensagens de erro */
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+/* --- Menus Laterais (Merge, Split, Organize) --- */
+.merge-menu,
+.split-menu,
+.organize-menu {
+    /* Estilos gerais para todos os menus laterais */
+    position: fixed;
+    top: 0;
+    right: -600px; /* Esconde o menu inicialmente */
+    width: 400px;
+    height: 100%;
+    background-color: #fff;
+    box-shadow: -4px 0 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    transition: right 0.3s ease;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.merge-menu h3,
+.split-menu h3,
+.organize-menu h3 {
+    /* Estilos dos títulos dos menus laterais */
+    margin-top: 20px;
+    font-size: 30px; /* Tamanho ajustado conforme original para merge */
+}
+
+.split-menu h3 {
+    /* Estilo específico para o título do menu de split */
+    font-size: 18px;
+}
+
+.organize-menu h3 {
+    /* Estilo específico para o título do menu de organize */
+    font-size: 24px;
+}
+
+.close-btn {
+    /* Estilos do botão de fechar os menus laterais */
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    color: #333;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    margin-bottom: 5px;
+}
+
+.close-btn:hover {
+    /* Estilos do botão de fechar ao passar o mouse */
+    color: #ff0000;
+}
+
+/* --- Botões de Ação (Iniciar Merge, Split, Organize) --- */
+#start-merge,
+#start-split,
+#start-organize {
+    /* Estilos gerais para os botões de iniciar operações */
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    margin: 0;
+    padding: 15px 40px;
+    background-color: #008cff;
+    border-radius: 8px;
+    width: auto;
+    min-width: 200px;
+    max-width: 700px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, opacity 0.3s ease, border 0.3s ease, transform 0.3s ease;
+    box-sizing: border-box;
+    border: none;
+    position: absolute;
+    bottom: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+    transform-origin: center center;
+    z-index: 10;
+}
+
+#start-merge:hover,
+#start-organize:hover {
+    /* Estilos dos botões de iniciar (merge, organize) ao passar o mouse */
+    background-color: #115cce;
+    transform: translateX(-50%) scale(1.1);
+    max-width: 740px;
+}
+
+#start-split:hover:not(:disabled) {
+    /* Estilos do botão de iniciar split ao passar o mouse (se não estiver desabilitado) */
+    background-color: #115cce;
+    transform: translateX(-50%) scale(1.1);
+    max-width: 740px;
+}
+
+#start-split:disabled {
+    /* Estilos do botão de iniciar split quando desabilitado */
+    background-color: #888888;
+    cursor: not-allowed;
+    opacity: 0.6;
+    transform: translateX(-50%) scale(1);
+    max-width: 700px;
+}
+
+#start-organize {
+    /* Estilos específicos do botão iniciar organização */
+    min-width: 250px;
+}
+
+/* --- Opções de Divisão (Split) --- */
+.split-option {
+    /* Estilos para opções de divisão */
+    margin: 30px 0 100px 0;
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+    color: #444;
+    font-family: 'Poppins', sans-serif;
+}
+
+.split-option p {
+    /* Estilos do parágrafo nas opções de divisão */
+    margin-bottom: 12px;
+}
+
+#split-parts-input,
+#split-size-input {
+    /* Estilos dos inputs de número de partes/tamanho */
+    width: 80px;
+    padding: 8px 10px;
+    font-size: 18px;
+    border: 2px solid #008cff;
+    border-radius: 8px;
+    text-align: center;
+    transition: border-color 0.3s ease;
+    outline-offset: 2px;
+    font-family: 'Poppins', sans-serif;
+}
+
+#split-parts-input.active,
+#split-size-input.active {
+    /* Estilos dos inputs ativos de divisão */
+    background-color: #115cce;
+    font-weight: bold;
+    transition: border 0.2s ease;
+    padding: 14px;
+    transition: padding 0.3s ease;
+}
+
+#parts-option,
+#size-option {
+    /* Visibilidade inicial das opções de divisão */
+    display: none;
+}
+
+.mode-btn {
+    /* Estilos dos botões de modo de divisão */
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    margin: 15px 0;
+    padding: 10px;
+    background-color: #008cff;
+    border-radius: 8px;
+    width: 95%;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, opacity 0.3s ease, border 0.3s ease, padding 0.3s ease;
+    border: none;
+    user-select: none;
+}
+
+.mode-btn:hover {
+    /* Estilos dos botões de modo ao passar o mouse */
+    background-color: #115cce;
+    transition: border 0.2s ease;
+    padding: 14px;
+    transition: padding 0.3s ease;
+}
+
+.mode-btn.active {
+    /* Estilos dos botões de modo ativos */
+    background-color: #115cce;
+    font-weight: bold;
+    transition: border 0.2s ease;
+    padding: 14px;
+    transition: padding 0.3s ease;
+}
+
+/* --- Elementos de Carregamento (Spinner) --- */
+.spinner {
+    /* Estilos do spinner de carregamento */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    width: 50px;
+    height: 50px;
+    border: 6px solid #f3f3f3;
+    border-top: 6px solid #3498db;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    /* Animação de rotação do spinner */
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+.spinner.hidden {
+    /* Esconde o spinner */
+    display: none;
+}
+
+/* --- Funções de Organização (Girar Páginas) --- */
+#organize-function-buttons {
+    /* Contêiner dos botões específicos de organização */
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.rotate-btn {
+    /* Estilos do botão de girar página individualmente */
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: #198754;
+    border: none;
+    color: white;
+    font-size: 18px;
+    padding: 4px 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    z-index: 5;
+}
+
+.rotate-btn:hover {
+    /* Estilos do botão de girar ao passar o mouse */
+    background-color: #145c32;
+}
+
+#rotate-all-btn {
+    /* Estilos do botão para girar todas as páginas */
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    margin: 0 0 15px 0;
+    padding: 12px 30px;
+    background-color: #198754;
+    border-radius: 8px;
+    width: auto;
+    min-width: 200px;
+    max-width: 700px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-sizing: border-box;
+    border: none;
+}
+
+#rotate-all-btn:hover {
+    /* Estilos do botão girar todas as páginas ao passar o mouse */
+    background-color: #145c32;
+    transform: scale(1.05);
+}
+
+/* --- Ordenação de Arquivos --- */
+#sort-icon {
+    /* Estilos do ícone de ordenação */
+    position: absolute;
+    top: 25px;
+    right: 20px;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    z-index: 1000;
+    transition: transform 0.2s ease;
+}
+
+#sort-icon:hover {
+    /* Estilos do ícone de ordenação ao passar o mouse */
+    transform: scale(1.1);
+}
+
+#sort-menu {
+    /* Estilos do menu de ordenação */
+    display: none;
+    position: absolute;
+    top: 54px;
+    left: 93%;
+    background: white;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    z-index: 999;
+    border-radius: 6px;
+    min-width: 180px;
+}
+
+#sort-menu button {
+    /* Estilos dos botões dentro do menu de ordenação */
+    background-color: #f3f4f6;
+    border: none;
+    padding: 8px 12px;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+}
+
+#sort-menu button:hover {
+    /* Estilos dos botões do menu de ordenação ao passar o mouse */
+    background-color: #e5e7eb;
+}
+
+/* --- Outros Elementos --- */
+#functions-btn {
+    /* Z-index para botões de função */
+    z-index: 1100;
+}
+
+#pdf-preview-container {
+    /* Contêiner de pré-visualização de PDF */
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+#pdf-canvas {
+    /* Canvas de pré-visualização de PDF */
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.clickable {
+    /* Estilos para elementos clicáveis */
+    cursor: pointer;
+    text-decoration: none;
+    color: #666;
+}
+
+.clickable:visited {
+    /* Estilos para links visitados */
+    color: #666;
+}
+
+/* --- Rodapé --- */
 footer {
+    /* Estilos do rodapé */
     align-items: center;
     text-align: center;
     margin-top: 40px;
